@@ -1,4 +1,3 @@
-
 # Jaffna Classless CSS Framework
 
 Jaffna CSS is a classless CSS framework. The framework expands on the great movement of classless revolution to make tech more advanced and accessible to everyone.
@@ -9,6 +8,6 @@ One of the most advanced civilization in Asia, Tamil people are indigenous peopl
 
 Social, economical and scientific advancement of ancient Tamil people continue benefit the global community in many ways. Tamil people truly embrace justice, equality and sharing of universal space in harmony with nature for the benefit humanity.
 
-To get started, simply fork or download the assets into your favorite code editor and then start making changes as you for your project requirement. Please note that all files are SCSS format; which are to be converted CSS during production build. It can also be converted to CSS manually using any prefered method.
+To get started, simply fork or download the assets into your favorite code editor and then start making changes as you for your project requirement. Please note that all files are SCSS format; which are to be converted CSS during production build. It can also be converted to CSS manually using any preferred method.
 
 If you like Jaffna CSS, please share with everyone. For any issues, please do not hesitate to send an email kiri@digitaldesigners.ca.
