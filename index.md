@@ -10,4 +10,4 @@ Social, economical and scientific advancement of ancient Tamil people continue b
 
 To get started, simply fork or download the assets into your favorite code editor and then start making changes as you for your project requirement. Please note that all files are SCSS format; which are to be converted CSS during production build. It can also be converted to CSS manually using any preferred method.
 
-If you like Jaffna CSS, please share with everyone. For any issues, please do not hesitate to send an email kiri@digitaldesigners.ca.
+If you like Jaffna CSS, kindly share with everyone. If you like to contribute to improvement and or enhancement of the project, please refer to GitHub recommendations. For any other concerns, just send an email to kiri@digitaldesigners.ca.
