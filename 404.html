@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaffna Classless CSS</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        color: hsl(0, 0%, 5%);
+        background-color: hsl(180, 100%, 45%);
+        font-family: "Consolas", "Courier New", monospace;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+
+      main {
+        width: min(100% - 2rem, 60em);
+        margin-left: auto;
+        margin-right: auto;
+        padding-block: 1em;
+        flex: 0 1 100%;
+      }
+
+      footer {
+        margin-top: auto;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      footer p {
+        margin-right: 1em;
+        margin-left: 1em;
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      a:link {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.25em;
+        object-fit: cover;
+        border: solid 2px hsl(180, 100%, 45%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sorry, the page does not exist.</h1>
+      <img src="./tamil-genocide.png" alt="Tamil Genocide Day, May 18" />
+      <p>Lest we forget the victims of Tamil Genocide, May 2009.</p>
+    </main>
+
+    <footer>
+      <p>© 2022. Kiri Vadivelu</p>
+      <p>Project by <a href="Digital Designers">Digital Designers</a></p>
+    </footer>
+  </body>
+</html>
