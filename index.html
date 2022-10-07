@@ -30,7 +30,6 @@
         background-color: hsl(180, 100%, 45%);
         font-family: "Consolas", "Courier New", monospace;
       }
-
       body {
         margin: 0;
         padding: 0;
@@ -41,14 +40,19 @@
         min-height: 100vh;
       }
 
+      header {
+        width: min(100% - 2rem);
+        display: grid;
+        place-items: center;
+      }
       main {
-        width: min(100% - 2rem, 60em);
+        width: min(100% - 2rem, 50em);
         margin-left: auto;
         margin-right: auto;
-        padding-block: 1em;
+        padding-top: 2em;
+        padding-bottom: 4em;
         flex: 0 1 100%;
       }
-
       footer {
         margin-top: auto;
         background: black;
@@ -64,28 +68,52 @@
         text-align: center;
         text-transform: uppercase;
       }
-
       a:link {
         color: yellow;
         font-weight: 600;
         text-decoration: none;
         text-underline-offset: 4px;
       }
-
       a:hover,
       a:focus {
         text-decoration: underline;
       }
+
+      figure {
+        margin: 3em 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.25em;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+      }
     </style>
   </head>
   <body>
+    <header>
+      <figure>
+        <img
+          src="pandara-vanniyan.jpeg"
+          alt="King Pandara Vanniyan in 17th century, pre-european colonization"
+        />
+        <figcaption>
+          King Pandara Vanniyan in 17th century, pre-european colonization
+        </figcaption>
+      </figure>
+    </header>
     <main>
       <h1>Jaffna Classless CSS</h1>
       <h3>What is Jaffna CSS?</h3>
       <p>
-        Jaffna CSS is a classless CSS framework. The framework expands on the
-        great movement of classless revolution to make tech more advanced and
-        accessible to everyone. Jaffna CSS was created out of necessity.
+        Jaffna CSS is a classless CSS framework embracing the traditions of
+        Tamil King Pandara Vanniyan in prior to european colonization in 17th
+        century. The framework expands on the great movement of classless
+        revolution to make tech more advanced and accessible to everyone. Jaffna
+        CSS was created out of necessity.
       </p>
       <p>
         There is significant gap between classless CSS such as
