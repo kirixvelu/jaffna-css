@@ -1,0 +1,21 @@
+{
+  "name": "Jaffna Classless CSS",
+  "short_name": "Jaffna CSS",
+  "description": "Jaffna Classless CSS Resources",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#222",
+  "background_color": "#00e6e6",
+  "display": "standalone"
+}
