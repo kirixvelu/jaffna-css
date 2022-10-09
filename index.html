@@ -65,12 +65,12 @@
         margin-top: auto;
         background: black;
         color: white;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        place-items: center;
       }
-      footer p {
-        margin-right: 1em;
-        margin-left: 1em;
+      footer > p {
+        max-width: 50rem;
+        padding-inline: 1rem;
       }
       h1 {
         text-align: center;
@@ -188,9 +188,9 @@
     </main>
 
     <footer>
-      <p>© 2022. Kiri Vadivelu</p>
       <p>
-        Project by <a href="https://digitaldesigners.ca">Digital Designers</a>
+        © 2022, Kiri Vadivelu | MIT License | Project by
+        <a href="https://digitaldesigners.ca">Digital Designers</a>
       </p>
     </footer>
   </body>
