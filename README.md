@@ -1,20 +1,18 @@
-# jaffna-css
+# DIGITAL DESIGNERS
 
-Jaffna Classless CSS Framework
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85cd69e8-8bff-488b-9f52-e3571203f20d/deploy-status)](https://app.netlify.com/sites/jaffnacss/deploys)
 
-Jaffna CSS is a classless CSS framework. The framework expands on the great movement of classless revolution to make tech more advanced and accessible to everyone. Jaffna CSS was created out of necessity.
+- License [Project](https://kiri-vadivelu.ca/license.txt)
+- Build System [11TY](https://11ty.dev/)
+- Web Architecture [Principles](https://jamstack.org/)
+- Design Team [Digital Designers](https://digitaldesigners.ca)
 
-There is significant gap between classless CSS such as SimpleCSS and
-full of class CSS such as Bootstrap, while excluding famous Tailwind
-appetite without discussion. Jaffna CSS elegantly fills the space with
-some classes needed to design the complete static website.
+The project was researched, designed and developed by Digital Designers Team in the city of Toronto. Digital Designers is a web design company that specializes in deploying modern portfolio websites, search engine optimizations and social media marketing.
 
-The name Jaffna refers to the capital city of Eelam Tamil people in Sri Lanka. Jaffna was the most advanced international trading hub thousands of years ago in prior to back to back colonization of the former British colony Ceylon.
+As a creative design agency, Digital Designers innovate business operations in the market driven economy. Utilizing the expertise of analytical research, performance design and sustainable implementation of cloud technology, Digital Designers continue to push the boundaries of modern web technology. Among the tech industries, diversity of creative talent enable Digital Designers to be the leading disrupter in Greater Toronto.
 
-As one of the most advanced civilization in Asia, Tamil people are indigenous people of the South India. Even after repeat colonial exploitation and genocidal war that consumed millions of innocent lives, resilient Tamil people of Jaffna continue to live and rebuild Jaffna.
+If you are interested in creating an awesome digital showcase of your professional work, do not hesitate to reach out to Digital Designers. You may visit [Digital Designers](https://digitaldesigners.ca) to learn more about the team, projects and innovations.
 
-Gracefully, the social, economical and scientific advancement of ancient Tamil people continue benefit global community in many ways. Tamil people truly embrace justice, equality and spiritual sharing of universal space in harmony with nature for the benefit of humanity.
+Should you find yourself sharing our values, principles or ethics of business, we want to hear from you. Market may be saturated but we often find ourselves lonely at the top.
 
-To get started, simply fork or download the assets into your favorite code editor and then start making changes as you for your project requirement. Please note that all files are SCSS format; which are to be automatically converted to CSS during production build. It can also be converted manually using any preferred method.
-
-The code is written to be self explanatory. Please read chronologically for easier interpretation. If you like Jaffna CSS, please share with everyone. For any issues, please send an email to kiri@digitaldesigners.ca.
+Email: hello@digitaldesigners.ca | Toronto
