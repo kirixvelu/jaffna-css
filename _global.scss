@@ -1,0 +1,78 @@
+// structure
+// primary containers (main, section, wrapper)
+html {
+  color: var(--text);
+  background-color: var(--background);
+  scroll-padding-top: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+  // prevents horizontal scroll
+  overflow-x: hidden;
+}
+// use wrapper for header & footer
+header {
+  padding-block: 1rem;
+}
+
+footer {
+  margin-top: auto;
+  padding-block: 1rem;
+}
+
+section {
+  // only enabled horizontal scroll
+  overflow-x: auto;
+}
+
+// Non-nestable primary containers
+main,
+section,
+.wrapper {
+  width: min(100%, 80em);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+// caused ul li images misalignment
+// global spacing
+article {
+  width: min(100%, 80ch);
+  margin-inline: auto;
+}
+
+img {
+  margin-inline: auto;
+}
+
+// block element
+hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-radius: var(--radius-1);
+}
+
+// use inside p
+mark {
+  padding: 0 0.25em;
+  background-color: var(--mark);
+}
+// use inside p
+q {
+  font-style: italic;
+}
+
+ul {
+  li::marker {
+    color: var(--theme);
+  }
+}
+
+ol {
+  li::marker {
+    color: var(--theme);
+  }
+}

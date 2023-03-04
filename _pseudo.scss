@@ -1,0 +1,12 @@
+// Pseudo Elements
+a[href^="mailto"]::before {
+  content: " \2709";
+  font-size: 1.1em;
+  margin-right: 0.25em;
+}
+
+a[href^="tel"]::before {
+  content: " \260F";
+  font-size: 1.1em;
+  margin-right: 0.25em;
+}

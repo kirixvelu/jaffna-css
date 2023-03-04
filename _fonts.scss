@@ -1,0 +1,80 @@
+// Typography
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  font-family: var(--serif);
+  word-wrap: break-word;
+}
+
+// Logo
+.logo {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+footer a {
+  margin-left: 0.25em;
+}
+
+// viewport 320 to 1280, font 15 to 20, growth scale 1.2 to 1.5
+p {
+  font-size: var(--step-0);
+}
+
+h2 {
+  font-size: var(--step-2);
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: var(--step-4);
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -0.15rem;
+  opacity: 0.8;
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+h4 {
+  font-size: var(--step-1);
+  font-style: italic;
+}
+
+small {
+  font-size: var(--step-s);
+  text-transform: uppercase;
+}
+
+// p inside blockquote
+blockquote {
+  padding: 0.25em;
+  border-left: 5px solid var(--theme);
+  background-color: var(--shade);
+  border-radius: var(--radius);
+
+  p {
+    font-size: var(--step-2);
+    line-height: 1;
+  }
+}
+
+cite {
+  display: block;
+  text-align: right;
+  margin-top: 0.25em;
+  color: var(--theme);
+  font-size: var(--step-0);
+  font-weight: 900;
+}
+
+cite::before {
+  content: "\2014";
+}

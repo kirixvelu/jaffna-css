@@ -1,114 +1,88 @@
-// Buttons, forms and input
+// Grid form
 form {
-  width: min(100%, 60rem);
-  padding-inline: 1em;
+  border: var(--border-1) solid;
+  background-color: var(--background);
+  border-radius: var(--radius-1);
+}
+// form ul wrapper
+.form {
+  display: grid;
+  max-width: 88ch;
+  margin: var(--margin-3) auto;
+  gap: var(--gap-1);
+
+  // min() with 100% prevents overflow in extra narrow spaces
+  // Unexpected behavior between mobile and tablet acknowledged
+  // Smaller gap reduce the length of grid minmax misbehavior
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20ch), 1fr));
+
+  // form item wrapper
+  li {
+    grid-column: span 2;
+  }
+  // title/ message items
+  .full-width {
+    grid-column: 1 / -1;
+  }
 }
 
-.button,
-button,
-input[type="submit"],
-input[type="button"] {
-  display: inline-block;
-  padding: 0.2em 0.6em;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: var(--surface);
-  color: var(--text);
-  border-radius: var(--radius);
-  border: 1px solid;
-  cursor: pointer;
-  transition: all var(--time) var(--function);
-}
-
-.button:focus:enabled,
-.button:hover:enabled,
-button:focus:enabled,
-button:hover:enabled,
-input[type="submit"]:focus:enabled,
-input[type="submit"]:hover:enabled,
-input[type="button"]:focus:enabled,
-input[type="button"]:hover:enabled {
-  background-color: var(--theme);
-  color: var(--theme-text);
-  outline: 0;
-}
-
-input,
-textarea {
-  border: 1px solid var(--neutral);
-  width: min(100%, 60rem);
-}
 input:focus,
 textarea:focus {
-  border: 1px solid var(--theme);
+  border: var(--border-1) solid;
 }
 
 textarea {
   resize: none;
-  line-height: 1.1;
-  height: 10rem;
+  min-height: 10em;
 }
 
 textarea,
 select,
+option,
 input {
-  color: var(--neutral);
-  padding: 0.2em 0.6em;
-  background-color: var(--surface);
-  border: 1px solid var(--neutral);
-  border-radius: var(--radius);
-  box-shadow: none;
+  padding: var(--padding-1);
+  border: var(--border) solid;
+  border-radius: var(--radius-1);
+  width: 100%;
 }
 textarea:focus,
 select:focus,
 input:focus {
-  border: 1px solid var(--theme);
-  outline: 0;
+  border: var(--border-1) solid;
+  outline-color: transparent;
 }
 
 input[type="checkbox"]:focus {
-  outline: 1px dotted var(--theme);
+  outline: 1px dotted;
 }
 
 label,
 legend,
 fieldset {
   display: block;
-  font-weight: 600;
+  font-weight: 400;
 }
 
+// input interaction behavior
 input {
-  text-align: center;
-  accent-color: var(--theme);
-  border: 1px solid var(--neutral);
+  border: 1px solid;
 }
-
+// border turns red
 input:not(:focus):not(:placeholder-shown):invalid {
-  border-color: var(--error);
+  border-color: var(--clr-hint);
 }
-
+// border turns green
 input:not(:focus):not(:placeholder-shown):valid {
-  border-color: var(--valid);
+  border-color: var(--clr-okay);
 }
-
-input:not(:focus):not(:placeholder-shown):invalid ~ .error {
+// shown hint
+input:not(:focus):not(:placeholder-shown):invalid ~ .hint {
   display: block;
 }
-
-.error {
+// hidden default
+.hidden {
   display: none;
 }
-
-[type="range"],
-meter,
-progress {
-  display: block;
-  width: 100%;
-  height: 2em;
-}
-
-[type="color"] {
-  height: 2em;
-  vertical-align: top;
+.hint {
+  color: var(--clr-hint);
 }

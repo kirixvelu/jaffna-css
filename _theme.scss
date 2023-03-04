@@ -1,66 +1,120 @@
 :root {
-  /* Theming */
-  --text: hsl(0, 0%, 5%);
-  --surface: hsl(0, 0%, 96%);
-  --surface-alt: hsl(0, 0%, 80%);
-  --surface-clear: transparent;
-  --theme: hsl(180, 100%, 45%);
-  --theme-text: hsl(0, 0%, 5%);
-  --valid: hsl(120, 100%, 50%);
-  --error: hsl(0, 100%, 60%);
-  --link: hsl(64, 52%, 68%);
-  --neutral: hsl(0, 0%, 80%);
+  /* colors */
+  --text: hsl(0, 0%, 4%);
+  --text-inverse: hsl(0, 0%, 98%);
+  --background: hsl(0, 0%, 96%);
+  --background-glassy: hsla(0, 0%, 100%, 0.3);
+  --theme: hsl(180, 50%, 50%);
+  --theme-dark: hsl(180, 50%, 15%);
+  --theme-light: hsl(180, 50%, 85%);
+  --theme-glassy: hsla(180, 50%, 50%, 0.4);
+  --grey: hsl(0, 0%, 65%);
+  --grey-light: hsl(0, 0%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --clr-okay: hsl(110, 100%, 30%);
+  --clr-hint: hsl(0, 75%, 50%);
+  --clr-mark: hsl(60, 100%, 50%);
+  --clr-link: hsl(215, 75%, 50%);
+  --clr-visited: hsl(300, 100%, 25%);
+  --clr-focus: hsl(110, 100%, 75%);
+
+  // form control elements
+  accent-color: var(--theme);
+
+  // Showcase/ hero backgrounds
+  --bg-oval-theme: radial-gradient(
+    ellipse at bottom right,
+    var(--theme-dark),
+    transparent
+  );
+
+  --bg-oval-grey: radial-gradient(
+    ellipse at bottom left,
+    transparent,
+    rgba(255, 255, 255, 0.1)
+  );
+
+  --bg-oval-white: radial-gradient(
+    ellipse,
+    transparent,
+    rgba(255, 255, 255, 0.1)
+  );
 
   /* Properties */
-  --time: 250ms;
-  --function: ease;
-  --radius: 0.5em;
-  --opacity: 0.85;
-  --border: 1px;
-  --i-shadow: 0px 150px 100px -25px rgba(0, 0, 0, 0.2);
-  --b-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  --t-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
-  --d-shadow: (0px 0px 10px rgba(0, 0, 0, 0.5));
+  --opacity-1: 0.9;
+  --opacity-2: 0.8;
+  --opacity-3: 0.7;
+  --ratio-wide: 16 / 9;
+  --ratio-square: 1 / 1;
+  --ratio-portrait: 1 / 2;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-3: 3px;
+  --radius-1: 0.25em;
+  --radius-2: 0.5em;
+  --radius-3: 0.75em;
+  --padding-1: clamp(0.125rem, 1%, 0.25rem);
+  --padding-2: clamp(0.25rem, 1.75%, 0.5rem);
+  --padding-3: clamp(0.5rem, 2.5%, 1rem);
+  --spacing-1: clamp(0.5rem, 2.5%, 1rem);
+  --spacing-2: clamp(1rem, 5%, 3rem);
+  --spacing-3: clamp(2rem, 10%, 6rem);
 
-  /* Spacing */
-  --spacing: clamp(1em, 5%, 3em);
-  --spacing-lg: clamp(2em, 10%, 6em);
-  --spacing-sm: clamp(0.25em, 1.25%, 0.75em);
+  // Shadows
+  --box-shadow-1: 0 0 3em rgba(0, 0, 0, 0.1);
+  --box-shadow-2: 0 0 4em rgba(0, 0, 0, 0.2);
+  --box-shadow-3: 0 0 5em rgba(0, 0, 0, 0.3);
+
+  // to be examined
+  --text-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
+  --drop-shadow: (0px 0px 10px rgba(0, 0, 0, 0.5));
 
   /* Fonts */
   --sans: "Gill Sans", "Trebuchet MS", sans-serif;
   --serif: "Baskerville", "Palatino", serif;
   --mono: "Consolas", "Courier New", monospace;
-  --curs: "Brush Script MT", "Comic Sans MS", cursive;
 
-  /* Typography */
-  --step--1: clamp(0.75rem, calc(0.63rem + 0.63vw), 1.13rem);
-  --step-0: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
-  --step-1: clamp(1.33rem, calc(1.11rem + 1.11vw), 2rem);
-  --step-2: clamp(1.78rem, calc(1.48rem + 1.48vw), 2.67rem);
-  --step-3: clamp(2.37rem, calc(1.97rem + 1.97vw), 3.55rem);
-  --step-4: clamp(3.16rem, calc(2.63rem + 2.63vw), 4.74rem);
-  --step-5: clamp(4.21rem, calc(3.51rem + 3.51vw), 6.31rem);
+  // Sizing
+  --step-s: clamp(0.78rem, calc(0.76rem + 0.09vw), 0.83rem);
+  --step-0: clamp(0.94rem, calc(0.83rem + 0.52vw), 1.25rem);
+  --step-1: clamp(1.13rem, calc(0.88rem + 1.25vw), 1.88rem);
+  --step-2: clamp(1.35rem, calc(0.86rem + 2.44vw), 2.81rem);
+  --step-3: clamp(1.62rem, calc(0.75rem + 4.33vw), 4.22rem);
+  --step-4: clamp(1.94rem, calc(0.48rem + 7.31vw), 6.33rem);
+  --step-5: clamp(2.33rem, calc(-0.05rem + 11.93vw), 9.49rem);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: hsl(0, 0%, 98%);
-    --surface: hsl(0, 0%, 20%);
-    --surface-alt: hsl(0, 0%, 10%);
-    --theme: hsl(180, 100%, 25%);
-    --theme-text: hsl(0, 0%, 95%);
-    --valid: hsl(120, 100%, 30%);
-    --error: hsl(0, 100%, 30%);
-    --link: hsl(64, 52%, 68%);
-    --neutral: hsl(0, 0%, 40%);
+    --text: hsl(0, 0%, 96%);
+    --text-inverse: hsl(0, 0%, 94%);
+    --background: hsl(0, 0%, 10%);
+    --background-glassy: hsla(0, 0%, 100%, 0.3);
+    --theme: hsl(180, 50%, 45%);
+    --theme-dark: hsl(180, 50%, 25%);
+    --theme-light: hsl(180, 50%, 75%);
+    --theme-glassy: hsla(180, 50%, 50%, 0.4);
 
-    --b-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-    --t-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
-    --d-shadow: (0px 0px 10px rgba(0, 0, 0, 0.5));
-    --i-shadow: 0px 150px 100px -25px rgba(0, 0, 0, 0.25);
+    // static colors on both mode
+    --grey: hsl(0, 0%, 65%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    // reduced element colors on dark mode
+    --clr-okay: hsl(110, 100%, 30%);
+    --clr-hint: hsl(0, 75%, 40%);
+    --clr-mark: hsl(60, 100%, 40%);
+    --clr-link: hsl(215, 75%, 40%);
+    --clr-visited: hsl(300, 100%, 20%);
+    --clr-focus: hsl(110, 100%, 60%);
+
+    // increased shadow effect on dark mode
+    --box-shadow-1: 0 0 3em rgba(0, 0, 0, 0.1);
+    --box-shadow-2: 0 0 4em rgba(0, 0, 0, 0.2);
+    --box-shadow-3: 0 0 5em rgba(0, 0, 0, 0.3);
   }
-
+  // reduced img brightness on dark mode
   img {
     filter: brightness(0.8) contrast(1.2);
   }

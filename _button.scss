@@ -1,0 +1,48 @@
+// Inputs and buttons
+.button,
+button,
+input[type="submit"],
+input[type="button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 15ch;
+  text-decoration: none;
+  outline: 1px solid;
+  padding: var(--padding-1);
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-weight: 600;
+  // line-height: 2;
+  background-color: transparent;
+  transition: all 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--grey);
+  }
+}
+
+button,
+.button {
+  max-width: fit-content;
+}
+
+button.theme,
+.button.theme {
+  color: var(--text);
+  background-color: var(--grey);
+
+  &:hover,
+  &:focus {
+    background-color: var(--theme);
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--margin-2);
+  gap: var(--gap-3);
+}
