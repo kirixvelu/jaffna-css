@@ -1,38 +1,55 @@
-// Jaffna CSS 2.0
-@use "./reset" as *;
-// @use "./mixins" as *; // require import
-@use "./theme" as *;
+// Jaffna CSS 3.0 Architecture
 @use "./fonts" as *;
+@use "./destyle" as *; // replace resets
+@use "./typeface" as *;
+@use "./theming" as *;
+@use "./mixins" as *; // require import
 @use "./global" as *;
 @use "./layout" as *;
-@use "./cards" as *;
 @use "./button" as *;
+@use "./cards" as *;
 @use "./links" as *;
-@use "./print" as *;
+// @use "./element" as *;
 // @use "./feature" as *;
+// @use "./bg-linear" as *;
+// @use "./bg-center" as *;
+// @use "./bg-angle" as *;
+// @use "./bg-shapes" as *;
+// @use "./bg-icons" as *;
 // @use "./hero-1" as *;
 // @use "./hero-2" as *;
 // @use "./hero-3" as *;
 // @use "./hero-4" as *;
+// @use "./hero-motion" as *;
+// @use "./hero-parallax" as *;
+// @use "./hero-sticky" as *;
+// @use "./hero-image" as *;
+// @use "./hero-text" as *;
+// @use "./hero-sign" as *;
+// @use "./hero-anime" as *;
+// @use "./hero-stroke" as *;
+// @use "./hero-stack" as *;
+// @use "./hero-rotate" as *;
 // @use "./facepile" as *;
-// @use "./menu" as *;
-// @use "./popup" as *;
+// @use "./target" as *;
 // @use "./input" as *;
 // @use "./form" as *;
 // @use "./range" as *;
-// @use "./radio" as *;
-// @use "./check" as *;
 // @use "./toggle" as *;
 // @use "./lightbox" as *;
 // @use "./gallery" as *;
+// @use "./vignette" as *;
+// @use "./shadow" as *;
+// @use "./carousel" as *;
 // @use "./masonry" as *;
-// @use "./figure" as *;
-// @use "./scroll" as *;
-// @use "./stack" as *;
-// @use "./detail" as *;
-// @use "./table" as *;
-// @use "./anime" as *;
+// @use "./decor" as *;
+// @use "./hover" as *;
+// @use "./transition" as *;
+// @use "./observer" as *;
+// @use "./scroller" as *;
+// @use "./timeline" as *;
 // @use "./pseudo" as *;
+@use "./print" as *;
 
 // Guide notes
 // fonts - rem default
@@ -44,4 +61,13 @@
 // cards capped at 20em
 // articles capped at 80ch
 // containers capped at 80em/ 1280px
-// global scss require import
+// mixins require import
+
+// Special Thanks
+// Eric Meyer @meyerweb
+// Stephanie Eckles @5t3ph
+// Brad Traversy @traversymedia
+// Kevin Powell @KevinJPowell
+// Matt Biilmann @biilmann
+// Zach Leatherman @zachleat
+// Jen Simmons @jensimmons

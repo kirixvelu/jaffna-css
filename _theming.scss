@@ -1,0 +1,159 @@
+// variables
+:root {
+  /* color Variables */
+  --text: hsl(0, 0%, 5%);
+  --text-grey: hsl(0, 0%, 55%);
+  --text-inverse: hsl(0, 0%, 95%);
+  --background: hsl(0, 0%, 98%);
+
+  --theme: hsl(180, 50%, 50%);
+  --theme-dark: hsl(180, 50%, 30%);
+  --theme-light: hsl(180, 50%, 65%);
+
+  --accent: hsl(0, 100%, 50%);
+  --accent-dark: hsl(0, 100%, 30%);
+  --accent-light: hsl(0, 100%, 65%);
+
+  --grey: hsl(0, 0%, 65%);
+  --grey-light: hsl(0, 0%, 75%);
+  --grey-dark: hsl(0, 0%, 50%);
+
+  --black: hsl(0, 0%, 25%);
+  --black-light: hsl(0, 0%, 30%);
+  --black-dark: hsl(0, 0%, 20%);
+
+  --white: hsl(0, 0%, 90%);
+  --white-light: hsl(0, 0%, 95%);
+  --white-dark: hsl(0, 0%, 85%);
+
+  --clr-okay: hsl(110, 100%, 30%);
+  --clr-hint: hsl(0, 75%, 50%);
+  --clr-mark: hsl(45, 100%, 50%);
+  --clr-link: hsl(215, 75%, 50%);
+  --clr-past: hsl(300, 100%, 25%);
+  // Creative shadow (neon, black, theme or accent)
+  --shadow-color: 0deg 0% 0%; // default black without saturation and brightness
+  --filter-color: 0deg 100% 50%;
+  --inset-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.25); // For global elements only
+  // Form elements (neon, black, theme or accent)
+  accent-color: var(--theme); // default vary depending on browser vendor
+
+  /* Properties */
+  --px-1: 1px;
+  --px-2: 2px;
+  --px-3: 3px;
+  --px-4: 4px;
+  --px-5: 5px;
+  --em-1: 0.25em;
+  --em-2: 0.5em;
+  --em-3: 1em;
+  --em-4: 1.5em;
+  --em-5: 3em;
+  --padding-1: clamp(0.25em, 1.75%, 0.5em);
+  --padding-2: clamp(0.5em, 2.5%, 1em);
+  --padding-3: clamp(1em, 5%, 2em);
+  --padding-4: clamp(2em, 10%, 6em);
+  --padding-5: clamp(4em, 20%, 12em);
+  --spacing-1: clamp(0.25em, 1.75%, 0.5em);
+  --spacing-2: clamp(0.5em, 2.5%, 1em);
+  --spacing-3: clamp(1em, 5%, 2em);
+  --spacing-4: clamp(2em, 10%, 6em);
+  --spacing-5: clamp(4em, 20%, 12em);
+
+  // Roboto Flex Variant Properties
+  --font-resize: auto; //none | auto
+  --font-optics: 14; //opsz 8 | 144;
+  --font-weight: 400; //wght 100 | 1000
+  --font-contrast: 0; //GRAD -200 | 150
+  --font-stretch: 100; //wdth 25 | -151 // no % symbol
+  --font-spacing: 468; //XTRA 323 | 603
+  --font-ascender: 750; //YTAS 649 | 854
+  --font-descender: -203; //YTDE -305 | -98
+  --font-lowercase: 514; //YTLC 416 | 570
+  --font-uppercase: 712; //YTUC 528 | 760
+  --font-figure: 738; //YTFI 560 | 788
+  --font-angle: 0; //slnt -10 | 0
+  --font-ydepth: 79; //YOPQ 25 | 135
+  --font-xdepth: 96; //XOPQ 27 | 175
+
+  /* fallback system fonts */
+  --fb-system: system-ui, sans-serif; // text + heading
+
+  --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    Arial, sans-serif; // text + heading
+
+  --fb-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel, "URW Gothic",
+    source-sans-pro, sans-serif; // text
+
+  --fb-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    source-sans-pro, sans-serif; // text
+
+  --fb-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052,
+    Sylfaen, serif; // heading
+
+  --fb-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif; // heading
+
+  --fb-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace; // coding
+
+  --fb-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+    cursive; // writing
+
+  // Font Sizing
+  --step--2: clamp(0.56rem, calc(0.61rem + -0.07vw), 0.6rem);
+  --step--1: clamp(0.75rem, calc(0.72rem + 0.14vw), 0.83rem);
+  --step-0: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
+  --step-1: clamp(1.17rem, calc(0.93rem + 1.22vw), 1.88rem);
+  --step-2: clamp(1.47rem, calc(1rem + 2.34vw), 2.81rem);
+  --step-3: clamp(1.83rem, calc(1rem + 4.15vw), 4.22rem);
+  --step-4: clamp(2.29rem, calc(0.88rem + 7.03vw), 6.33rem);
+  --step-5: clamp(2.86rem, calc(0.55rem + 11.53vw), 9.49rem);
+  --step-6: clamp(3.58rem, calc(-0.13rem + 18.54vw), 14.24rem);
+  --step-7: clamp(4.47rem, calc(-1.4rem + 29.37vw), 21.36rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: hsl(0, 0%, 95%);
+    --text-grey: hsl(0, 0%, 50%);
+    --text-inverse: hsl(0, 0%, 5%);
+    --background: hsl(48, 81%, 47%);
+    --bg-transparent: hsla(0, 0%, 0%, 0.4);
+
+    --theme: hsl(180, 50%, 45%);
+    --theme-dark: hsl(180, 50%, 25%);
+    --theme-light: hsl(180, 50%, 60%);
+
+    --accent: hsl(0, 100%, 45%);
+    --accent-dark: hsl(0, 100%, 25%);
+    --accent-light: hsl(0, 100%, 60%);
+
+    --grey: hsl(0, 0%, 60%);
+    --grey-light: hsl(0, 0%, 75%);
+    --grey-dark: hsl(0, 0%, 50%);
+
+    --white: hsl(0, 0%, 90%);
+    --white-light: hsl(0, 0%, 95%);
+    --white-dark: hsl(0, 0%, 85%);
+
+    --black: hsl(0, 0%, 20%);
+    --black-light: hsl(0, 0%, 15%);
+    --black-dark: hsl(0, 0%, 25%);
+
+    // shadow color / form element
+    --shadow-color: 200deg 100% 50%;
+    accent-color: var(--theme);
+
+    // reduced colors on dark mode
+    --clr-okay: hsl(110, 100%, 30%);
+    --clr-hint: hsl(0, 75%, 40%);
+    --clr-mark: hsl(40, 100%, 40%);
+    --clr-link: hsl(215, 75%, 40%);
+    --clr-past: hsl(300, 100%, 20%);
+  }
+  // reduced img brightness on dark mode
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}

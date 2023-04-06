@@ -1,80 +1,56 @@
-// Typography
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1;
-  font-family: var(--serif);
-  word-wrap: break-word;
+// Font Family
+/* Variant Sans Fonts */
+@font-face {
+  font-family: "RobotoFlex-Variable";
+  src: url("../fonts/RobotoFlex-Variable.woff2") format("woff2-variations"),
+    url("../fonts/RobotoFlex-Variable.woff2") format("woff2");
+  // Safari requires though its deprecated
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 100 1000; /* prevents faux bolding in Safari */
+  font-stretch: 25% 150%; /* required by Chrome */
+  // RobotoFlex Variant settings, digits only, symbols not permitted, each variable correspond to given CSS variable
+  font-variation-settings: "wght" var(--font-weight), "wdth" var(--font-stretch),
+    "opsz" var(--font-optics), "GRAD" var(--font-contrast),
+    "slnt" var(--font-angle), "XTRA" var(--font-spacing),
+    "XOPQ" var(--font-xdepth), "YOPQ" var(--font-ydepth),
+    "YTLC" var(--font-lowercase), "YTUC" var(--font-uppercase),
+    "YTAS" var(--font-ascender), "YTDE" var(--font-descender),
+    "YTFI" var(--font-figure);
 }
 
-// Logo
-.logo {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.1em;
+/* Static fallback Font */
+@font-face {
+  font-family: "RobotoFlex-Regular";
+  src: url("../fonts/RobotoFlex-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback; /* method of loading font */
 }
 
-footer a {
-  margin-left: 0.25em;
-}
+// /* Variant Serif Fonts */
+// @font-face {
+//   font-family: "RobotoSerif-Variable";
+//   src: url("../fonts/RobotoSerif-VF.woff2") format("woff2-variations"),
+//     url("./icons/RobotoFlex-VF.woff2") format("woff2");
+//   // safari requires format with variations but its deprecated
+//   font-style: normal;
+//   font-display: fallback;
+//   font-weight: 100 900; /* prevents faux bolding in Safari */
+//   font-stretch: 50 150;
+// }
 
-// viewport 320 to 1280, font 15 to 20, growth scale 1.2 to 1.5
-p {
-  font-size: var(--step-0);
-}
+// RobotoSerif Variant settings, digits only, symbols not permitted
 
-h2 {
-  font-size: var(--step-2);
-  font-weight: 700;
-  letter-spacing: -0.1rem;
-  opacity: 0.9;
-}
+// /* Static fallback Font */
+// @font-face {
+//   font-family: "RobotoSerif-Regular";
+//   src: url("../fonts/RobotoSerif-Regular.woff") format("woff");
+//   font-style: normal;
+//   font-display: fallback; /* method of loading font */
+// }
 
-h1 {
-  font-size: var(--step-4);
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: -0.15rem;
-  opacity: 0.8;
-}
+// The terms font and typeface are often used interchangeably by developers. However there is a difference: A typeface is the underlying visual design that can exist in many different typesetting technologies, and a font is one of these implementations, in a digital file format. In other words, a typeface is what you see, and the font is what you use.
 
-h3 {
-  font-size: var(--step-1);
-}
+// Another concept that is often overlooked is the distinction between a style, and a family. A style is a single and specific typeface, such as Bold Italic, and a family is the complete set of styles.
 
-h4 {
-  font-size: var(--step-1);
-  font-style: italic;
-}
-
-small {
-  font-size: var(--step-s);
-  text-transform: uppercase;
-}
-
-// p inside blockquote
-blockquote {
-  padding: 0.25em;
-  border-left: 5px solid var(--theme);
-  background-color: var(--shade);
-  border-radius: var(--radius);
-
-  p {
-    font-size: var(--step-2);
-    line-height: 1;
-  }
-}
-
-cite {
-  display: block;
-  text-align: right;
-  margin-top: 0.25em;
-  color: var(--theme);
-  font-size: var(--step-0);
-  font-weight: 900;
-}
-
-cite::before {
-  content: "\2014";
-}
+// Before variable fonts, each style was implemented as a separate font file. With variable fonts, all styles can be contained in a single file.

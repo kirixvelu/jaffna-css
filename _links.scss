@@ -2,16 +2,17 @@
 :where(a:link) {
   color: var(--text);
   font-weight: 500;
+  outline: transparent;
   text-decoration: underline;
   padding-inline: 0.125em;
   text-underline-offset: 0.125em;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: var(--clr-link);
   }
 
   &:visited {
-    color: var(--clr-visited);
+    color: var(--clr-past);
   }
 }

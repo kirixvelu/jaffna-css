@@ -1,4 +1,4 @@
-// Inputs and buttons
+// Inputs, buttons and cta
 .button,
 button,
 input[type="submit"],
@@ -7,20 +7,24 @@ input[type="button"] {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 15ch;
+  min-width: 12ch;
   text-decoration: none;
-  outline: 1px solid;
-  padding: var(--padding-1);
+  outline: transparent;
+  padding-block: 0.25em;
+  border: 1px solid;
   border-radius: 0.25em;
   cursor: pointer;
   font-weight: 600;
-  // line-height: 2;
+  font-stretch: normal;
+  line-height: 1;
+  font-size: var(--step--2);
+  text-transform: uppercase;
   background-color: transparent;
   transition: all 250ms ease-in-out;
 
   &:hover,
-  &:focus {
-    background-color: var(--grey);
+  &:focus-visible {
+    background-color: var(--theme);
   }
 }
 
@@ -29,20 +33,53 @@ button,
   max-width: fit-content;
 }
 
-button.theme,
-.button.theme {
+// theme, accent and grey
+button.dark,
+.button.dark {
+  color: var(--text);
+  background-color: var(--background);
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+  }
+}
+
+button.light,
+.button.light {
   color: var(--text);
   background-color: var(--grey);
 
   &:hover,
-  &:focus {
-    background-color: var(--theme);
+  &:focus-visible {
+    background-color: transparent;
   }
 }
 
-.button-group {
+button.theme,
+.button.theme {
+  color: var(--text);
+  background-color: var(--theme);
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+  }
+}
+
+button.accent,
+.button.accent {
+  color: var(--text);
+  background-color: var(--accent);
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+  }
+}
+
+.btn-group {
   display: flex;
-  justify-content: center;
-  margin-block: var(--margin-2);
-  gap: var(--gap-3);
+  gap: var(--spacing-1);
+  margin-block: var(--spacing-1);
 }

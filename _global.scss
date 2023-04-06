@@ -1,51 +1,68 @@
 // structure
-// primary containers (main, section, wrapper)
 html {
   color: var(--text);
   background-color: var(--background);
-  scroll-padding-top: 2rem;
+  scroll-padding-top: 2rem; // optional
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: var(--sans);
-  // prevents horizontal scroll
-  overflow-x: hidden;
+  overflow-x: hidden; // optional
+  min-height: 100vh;
 }
-// use wrapper for header & footer
+
 header {
+  min-height: 1rem;
+}
+
+header,
+footer {
   padding-block: 1rem;
 }
 
 footer {
   margin-top: auto;
+}
+// primary container
+header,
+main,
+article,
+section,
+footer {
+  // use content wrapper for each
+  // do not nest content wrappers
+  // see backgrounds & colors in theme
+  // see backgrounds & shapes for svg visuals
+}
+
+main,
+section,
+article {
   padding-block: 1rem;
 }
 
 section {
-  // only enabled horizontal scroll
-  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; // required for visual elements
+  min-height: 10rem;
 }
 
-// Non-nestable primary containers
-main,
-section,
-.wrapper {
+// container maxed at 1280px
+.content,
+.content--padded {
   width: min(100%, 80em);
   margin-inline: auto;
   padding-inline: 1rem;
 }
 
-// caused ul li images misalignment
-// global spacing
-article {
-  width: min(100%, 80ch);
-  margin-inline: auto;
-}
-
-img {
-  margin-inline: auto;
+.content--padded {
+  padding-block: var(--padding-5);
+  // For positioning, coloring & graphics
+  // SVG graphics not to exceed 150px height
+  // optional padding-block: calc(250px + 1.5vw);
 }
 
 // block element
@@ -55,24 +72,87 @@ hr {
   border-radius: var(--radius-1);
 }
 
-// use inside p
-mark {
-  padding: 0 0.25em;
-  background-color: var(--mark);
-}
-// use inside p
-q {
-  font-style: italic;
-}
-
-ul {
-  li::marker {
-    color: var(--theme);
-  }
-}
-
+ul,
 ol {
   li::marker {
     color: var(--theme);
   }
+}
+
+img,
+picture {
+  margin-inline: auto;
+  border-radius: var(--radius-1);
+}
+
+audio,
+video,
+embed,
+object {
+  width: 100%;
+  display: block;
+}
+
+audio {
+  border: 2px solid; // audio wrapper style
+  border-radius: 1em;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+// semantic use in p or span
+
+em {
+  font-style: italic; // emphasizes to word
+}
+
+strong {
+  font-style: bold; // importance to statement
+}
+
+dfn {
+  font-style: bold; // definition of word in context
+}
+
+q {
+  padding-block: var(--padding-1); // attention to quote
+}
+var {
+  font-weight: bold; // describe mathematic equations
+}
+
+small {
+  font-size: 75%; // less important but required text
+}
+del {
+  text-decoration: line-through; // deleted text
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none; // replaced text
+  background-color: green;
+}
+
+hgroup {
+  border-bottom: 1px solid; // contain heading and subheading
+}
+
+dl {
+  // contain description list
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-block: 1em;
+}
+
+dt {
+  font-weight: bold; // term
+}
+
+dd {
+  margin-bottom: 0.5em; // description
 }

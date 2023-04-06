@@ -1,15 +1,43 @@
 @charset "UTF-8";
-/* Box sizing rules */
+/* Variant Sans Fonts */
+@font-face {
+  font-family: "RobotoFlex-Variable";
+  src: url("../fonts/RobotoFlex-Variable.woff2") format("woff2-variations"), url("../fonts/RobotoFlex-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 100 1000; /* prevents faux bolding in Safari */
+  font-stretch: 25% 150%; /* required by Chrome */
+  font-variation-settings: "wght" var(--font-weight), "wdth" var(--font-stretch), "opsz" var(--font-optics), "GRAD" var(--font-contrast), "slnt" var(--font-angle), "XTRA" var(--font-spacing), "XOPQ" var(--font-xdepth), "YOPQ" var(--font-ydepth), "YTLC" var(--font-lowercase), "YTUC" var(--font-uppercase), "YTAS" var(--font-ascender), "YTDE" var(--font-descender), "YTFI" var(--font-figure);
+}
+/* Static fallback Font */
+@font-face {
+  font-family: "RobotoFlex-Regular";
+  src: url("../fonts/RobotoFlex-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: fallback; /* method of loading font */
+}
+/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
 }
 
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
 }
 
 /* Set core root defaults */
@@ -17,47 +45,353 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.4;
-  position: relative;
+  margin: 0;
 }
 
-/* Remove default margin */
-body,
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
 h1,
 h2,
 h3,
 h4,
-p,
-ul,
-ol,
-figure,
-blockquote,
-dl,
-dd {
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
   padding: 0;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
   display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -74,46 +408,6 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  line-height: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  margin: 0; /* 2 */
-  width: 100%;
-}
-
-textarea {
-  max-width: 100%; /* corrects safari issue */
-}
-
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  border: 0;
-  padding: 0;
-  color: inherit;
-  font-size: inherit;
-  appearance: auto;
-  white-space: nowrap;
-}
-
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -127,182 +421,228 @@ button,
   white-space: nowrap !important;
 }
 
+body {
+  line-height: 1.15;
+  font-weight: 300;
+  font-stretch: condensed;
+  text-rendering: optimizeSpeed;
+  font-family: "RobotoFlex-Variable", "RobotoFlex-Regular", var(--fb-system);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  word-break: break-all;
+}
+
+.logo {
+  line-height: 1;
+}
+
+a,
+p,
+li {
+  font-size: var(--step-0);
+}
+
+small {
+  font-size: var(--step--1);
+}
+
+blockquote p {
+  padding: var(--padding-1);
+  border-radius: var(--radius-1);
+}
+
+blockquote p::before {
+  content: "“";
+}
+
+blockquote p::after {
+  content: "”";
+}
+
+.title,
+h1 {
+  font-size: var(--step-5);
+  text-align: center;
+}
+
+.subtitle,
+h2 {
+  font-size: var(--step-4);
+}
+
+.heading,
+h3 {
+  font-size: var(--step-3);
+}
+
+.subheading,
+h4 {
+  font-size: var(--step-2);
+}
+
+h5,
+.label {
+  font-size: var(--step-1);
+  text-transform: capitalize;
+}
+
+h6,
+.caption {
+  font-size: var(--step-0);
+  text-transform: uppercase;
+}
+
+.giant {
+  line-height: 0.8;
+  font-weight: 1000;
+  font-size: var(--step-6);
+}
+
+.title,
+.subtitle,
+.heading,
+.subheading,
+.label,
+.caption,
+.giant {
+  display: block;
+  word-break: break-all;
+}
+
 :root {
-  /* colors */
-  --text: hsl(0, 0%, 4%);
-  --text-inverse: hsl(0, 0%, 98%);
-  --background: hsl(0, 0%, 96%);
-  --background-glassy: hsla(0, 0%, 100%, 0.3);
+  /* color Variables */
+  --text: hsl(0, 0%, 5%);
+  --text-grey: hsl(0, 0%, 55%);
+  --text-inverse: hsl(0, 0%, 95%);
+  --background: hsl(0, 0%, 98%);
   --theme: hsl(180, 50%, 50%);
-  --theme-dark: hsl(180, 50%, 15%);
-  --theme-light: hsl(180, 50%, 85%);
-  --theme-glassy: hsla(180, 50%, 50%, 0.4);
+  --theme-dark: hsl(180, 50%, 30%);
+  --theme-light: hsl(180, 50%, 65%);
+  --accent: hsl(0, 100%, 50%);
+  --accent-dark: hsl(0, 100%, 30%);
+  --accent-light: hsl(0, 100%, 65%);
   --grey: hsl(0, 0%, 65%);
-  --grey-light: hsl(0, 0%, 90%);
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
+  --grey-light: hsl(0, 0%, 75%);
+  --grey-dark: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 25%);
+  --black-light: hsl(0, 0%, 30%);
+  --black-dark: hsl(0, 0%, 20%);
+  --white: hsl(0, 0%, 90%);
+  --white-light: hsl(0, 0%, 95%);
+  --white-dark: hsl(0, 0%, 85%);
   --clr-okay: hsl(110, 100%, 30%);
   --clr-hint: hsl(0, 75%, 50%);
-  --clr-mark: hsl(60, 100%, 50%);
+  --clr-mark: hsl(45, 100%, 50%);
   --clr-link: hsl(215, 75%, 50%);
-  --clr-visited: hsl(300, 100%, 25%);
-  --clr-focus: hsl(110, 100%, 75%);
+  --clr-past: hsl(300, 100%, 25%);
+  --shadow-color: 0deg 0% 0%;
+  --filter-color: 0deg 100% 50%;
+  --inset-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.25);
   accent-color: var(--theme);
-  --bg-oval-theme: radial-gradient(
-    ellipse at bottom right,
-    var(--theme-dark),
-    transparent
-  );
-  --bg-oval-grey: radial-gradient(
-    ellipse at bottom left,
-    transparent,
-    rgba(255, 255, 255, 0.1)
-  );
-  --bg-oval-white: radial-gradient(
-    ellipse,
-    transparent,
-    rgba(255, 255, 255, 0.1)
-  );
   /* Properties */
-  --opacity-1: 0.9;
-  --opacity-2: 0.8;
-  --opacity-3: 0.7;
-  --ratio-wide: 16 / 9;
-  --ratio-square: 1 / 1;
-  --ratio-portrait: 1 / 2;
-  --border-1: 1px;
-  --border-2: 2px;
-  --border-3: 3px;
-  --radius-1: 0.25em;
-  --radius-2: 0.5em;
-  --radius-3: 0.75em;
-  --padding-1: clamp(0.125rem, 1%, 0.25rem);
-  --padding-2: clamp(0.25rem, 1.75%, 0.5rem);
-  --padding-3: clamp(0.5rem, 2.5%, 1rem);
-  --spacing-1: clamp(0.5rem, 2.5%, 1rem);
-  --spacing-2: clamp(1rem, 5%, 3rem);
-  --spacing-3: clamp(2rem, 10%, 6rem);
-  --box-shadow-1: 0 0 3em rgba(0, 0, 0, 0.1);
-  --box-shadow-2: 0 0 4em rgba(0, 0, 0, 0.2);
-  --box-shadow-3: 0 0 5em rgba(0, 0, 0, 0.3);
-  --text-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
-  --drop-shadow: (0px 0px 10px rgba(0, 0, 0, 0.5));
-  /* Fonts */
-  --sans: "Gill Sans", "Trebuchet MS", sans-serif;
-  --serif: "Baskerville", "Palatino", serif;
-  --mono: "Consolas", "Courier New", monospace;
-  --step-s: clamp(0.78rem, calc(0.76rem + 0.09vw), 0.83rem);
-  --step-0: clamp(0.94rem, calc(0.83rem + 0.52vw), 1.25rem);
-  --step-1: clamp(1.13rem, calc(0.88rem + 1.25vw), 1.88rem);
-  --step-2: clamp(1.35rem, calc(0.86rem + 2.44vw), 2.81rem);
-  --step-3: clamp(1.62rem, calc(0.75rem + 4.33vw), 4.22rem);
-  --step-4: clamp(1.94rem, calc(0.48rem + 7.31vw), 6.33rem);
-  --step-5: clamp(2.33rem, calc(-0.05rem + 11.93vw), 9.49rem);
+  --px-1: 1px;
+  --px-2: 2px;
+  --px-3: 3px;
+  --px-4: 4px;
+  --px-5: 5px;
+  --em-1: 0.25em;
+  --em-2: 0.5em;
+  --em-3: 1em;
+  --em-4: 1.5em;
+  --em-5: 3em;
+  --padding-1: clamp(0.25em, 1.75%, 0.5em);
+  --padding-2: clamp(0.5em, 2.5%, 1em);
+  --padding-3: clamp(1em, 5%, 2em);
+  --padding-4: clamp(2em, 10%, 6em);
+  --padding-5: clamp(4em, 20%, 12em);
+  --spacing-1: clamp(0.25em, 1.75%, 0.5em);
+  --spacing-2: clamp(0.5em, 2.5%, 1em);
+  --spacing-3: clamp(1em, 5%, 2em);
+  --spacing-4: clamp(2em, 10%, 6em);
+  --spacing-5: clamp(4em, 20%, 12em);
+  --font-resize: auto;
+  --font-optics: 14;
+  --font-weight: 400;
+  --font-contrast: 0;
+  --font-stretch: 100;
+  --font-spacing: 468;
+  --font-ascender: 750;
+  --font-descender: -203;
+  --font-lowercase: 514;
+  --font-uppercase: 712;
+  --font-figure: 738;
+  --font-angle: 0;
+  --font-ydepth: 79;
+  --font-xdepth: 96;
+  /* fallback system fonts */
+  --fb-system: system-ui, sans-serif;
+  --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    Arial, sans-serif;
+  --fb-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel, "URW Gothic",
+    source-sans-pro, sans-serif;
+  --fb-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+    source-sans-pro, sans-serif;
+  --fb-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052,
+    Sylfaen, serif;
+  --fb-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  --fb-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace;
+  --fb-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+    cursive;
+  --step--2: clamp(0.56rem, calc(0.61rem + -0.07vw), 0.6rem);
+  --step--1: clamp(0.75rem, calc(0.72rem + 0.14vw), 0.83rem);
+  --step-0: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
+  --step-1: clamp(1.17rem, calc(0.93rem + 1.22vw), 1.88rem);
+  --step-2: clamp(1.47rem, calc(1rem + 2.34vw), 2.81rem);
+  --step-3: clamp(1.83rem, calc(1rem + 4.15vw), 4.22rem);
+  --step-4: clamp(2.29rem, calc(0.88rem + 7.03vw), 6.33rem);
+  --step-5: clamp(2.86rem, calc(0.55rem + 11.53vw), 9.49rem);
+  --step-6: clamp(3.58rem, calc(-0.13rem + 18.54vw), 14.24rem);
+  --step-7: clamp(4.47rem, calc(-1.4rem + 29.37vw), 21.36rem);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: hsl(0, 0%, 96%);
-    --text-inverse: hsl(0, 0%, 94%);
-    --background: hsl(0, 0%, 10%);
-    --background-glassy: hsla(0, 0%, 100%, 0.3);
+    --text: hsl(0, 0%, 95%);
+    --text-grey: hsl(0, 0%, 50%);
+    --text-inverse: hsl(0, 0%, 5%);
+    --background: hsl(48, 81%, 47%);
+    --bg-transparent: hsla(0, 0%, 0%, 0.4);
     --theme: hsl(180, 50%, 45%);
     --theme-dark: hsl(180, 50%, 25%);
-    --theme-light: hsl(180, 50%, 75%);
-    --theme-glassy: hsla(180, 50%, 50%, 0.4);
-    --grey: hsl(0, 0%, 65%);
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --theme-light: hsl(180, 50%, 60%);
+    --accent: hsl(0, 100%, 45%);
+    --accent-dark: hsl(0, 100%, 25%);
+    --accent-light: hsl(0, 100%, 60%);
+    --grey: hsl(0, 0%, 60%);
+    --grey-light: hsl(0, 0%, 75%);
+    --grey-dark: hsl(0, 0%, 50%);
+    --white: hsl(0, 0%, 90%);
+    --white-light: hsl(0, 0%, 95%);
+    --white-dark: hsl(0, 0%, 85%);
+    --black: hsl(0, 0%, 20%);
+    --black-light: hsl(0, 0%, 15%);
+    --black-dark: hsl(0, 0%, 25%);
+    --shadow-color: 200deg 100% 50%;
+    accent-color: var(--theme);
     --clr-okay: hsl(110, 100%, 30%);
     --clr-hint: hsl(0, 75%, 40%);
-    --clr-mark: hsl(60, 100%, 40%);
+    --clr-mark: hsl(40, 100%, 40%);
     --clr-link: hsl(215, 75%, 40%);
-    --clr-visited: hsl(300, 100%, 20%);
-    --clr-focus: hsl(110, 100%, 60%);
-    --box-shadow-1: 0 0 3em rgba(0, 0, 0, 0.1);
-    --box-shadow-2: 0 0 4em rgba(0, 0, 0, 0.2);
-    --box-shadow-3: 0 0 5em rgba(0, 0, 0, 0.3);
+    --clr-past: hsl(300, 100%, 20%);
   }
   img {
     filter: brightness(0.8) contrast(1.2);
   }
 }
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1;
-  font-family: var(--serif);
-  word-wrap: break-word;
-}
-
-.logo {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.1em;
-}
-
-footer a {
-  margin-left: 0.25em;
-}
-
-p {
-  font-size: var(--step-0);
-}
-
-h2 {
-  font-size: var(--step-2);
-  font-weight: 700;
-  letter-spacing: -0.1rem;
-  opacity: 0.9;
-}
-
-h1 {
-  font-size: var(--step-4);
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: -0.15rem;
-  opacity: 0.8;
-}
-
-h3 {
-  font-size: var(--step-1);
-}
-
-h4 {
-  font-size: var(--step-1);
-  font-style: italic;
-}
-
-small {
-  font-size: var(--step-s);
-  text-transform: uppercase;
-}
-
-blockquote {
-  padding: 0.25em;
-  border-left: 5px solid var(--theme);
-  background-color: var(--shade);
-  border-radius: var(--radius);
-}
-blockquote p {
-  font-size: var(--step-2);
-  line-height: 1;
-}
-
-cite {
-  display: block;
-  text-align: right;
-  margin-top: 0.25em;
-  color: var(--theme);
-  font-size: var(--step-0);
-  font-weight: 900;
-}
-
-cite::before {
-  content: "—";
-}
-
 html {
   color: var(--text);
   background-color: var(--background);
@@ -312,38 +652,46 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: var(--sans);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 header {
+  min-height: 1rem;
+}
+
+header,
+footer {
   padding-block: 1rem;
 }
 
 footer {
   margin-top: auto;
-  padding-block: 1rem;
-}
-
-section {
-  overflow-x: auto;
 }
 
 main,
 section,
-.wrapper {
+article {
+  padding-block: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 10rem;
+}
+
+.content,
+.content--padded {
   width: min(100%, 80em);
   margin-inline: auto;
   padding-inline: 1rem;
 }
 
-article {
-  width: min(100%, 80ch);
-  margin-inline: auto;
-}
-
-img {
-  margin-inline: auto;
+.content--padded {
+  padding-block: var(--padding-5);
 }
 
 hr {
@@ -352,29 +700,92 @@ hr {
   border-radius: var(--radius-1);
 }
 
-mark {
-  padding: 0 0.25em;
-  background-color: var(--mark);
-}
-
-q {
-  font-style: italic;
-}
-
-ul li::marker {
-  color: var(--theme);
-}
-
+ul li::marker,
 ol li::marker {
   color: var(--theme);
 }
 
-.grid {
-  display: grid;
+img,
+picture {
+  margin-inline: auto;
+  border-radius: var(--radius-1);
 }
 
-.flex {
-  display: flex;
+audio,
+video,
+embed,
+object {
+  width: 100%;
+  display: block;
+}
+
+audio {
+  border: 2px solid;
+  border-radius: 1em;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-style: bold;
+}
+
+dfn {
+  font-style: bold;
+}
+
+q {
+  padding-block: var(--padding-1);
+}
+
+var {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: green;
+}
+
+hgroup {
+  border-bottom: 1px solid;
+}
+
+dl {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-block: 1em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5em;
+}
+
+.showcase {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
 
 .grid-uno {
@@ -387,7 +798,6 @@ ol li::marker {
 
 .grid-auto {
   display: grid;
-  margin-inline: auto;
   gap: var(--spacing-1);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
 }
@@ -440,10 +850,99 @@ ol li::marker {
   align-self: end;
 }
 
+.button,
+button,
+input[type=submit],
+input[type=button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 12ch;
+  text-decoration: none;
+  outline: transparent;
+  padding-block: 0.25em;
+  border: 1px solid;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: 1;
+  font-size: var(--step--2);
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: all 250ms ease-in-out;
+}
+.button:hover, .button:focus-visible,
+button:hover,
+button:focus-visible,
+input[type=submit]:hover,
+input[type=submit]:focus-visible,
+input[type=button]:hover,
+input[type=button]:focus-visible {
+  background-color: var(--theme);
+}
+
+button,
+.button {
+  max-width: fit-content;
+}
+
+button.dark,
+.button.dark {
+  color: var(--text);
+  background-color: var(--background);
+}
+button.dark:hover, button.dark:focus-visible,
+.button.dark:hover,
+.button.dark:focus-visible {
+  background-color: transparent;
+}
+
+button.light,
+.button.light {
+  color: var(--text);
+  background-color: var(--grey);
+}
+button.light:hover, button.light:focus-visible,
+.button.light:hover,
+.button.light:focus-visible {
+  background-color: transparent;
+}
+
+button.theme,
+.button.theme {
+  color: var(--text);
+  background-color: var(--theme);
+}
+button.theme:hover, button.theme:focus-visible,
+.button.theme:hover,
+.button.theme:focus-visible {
+  background-color: transparent;
+}
+
+button.accent,
+.button.accent {
+  color: var(--text);
+  background-color: var(--accent);
+}
+button.accent:hover, button.accent:focus-visible,
+.button.accent:hover,
+.button.accent:focus-visible {
+  background-color: transparent;
+}
+
+.btn-group {
+  display: flex;
+  gap: var(--spacing-1);
+  margin-block: var(--spacing-1);
+}
+
 .flex-auto > li {
   border: var(--border-1) solid;
   border-radius: var(--radius-1);
   padding: var(--padding-1);
+  overflow: hidden;
 }
 
 .grid-auto > li {
@@ -519,69 +1018,19 @@ ol li::marker {
   background-color: var(--theme);
 }
 
-.button,
-button,
-input[type=submit],
-input[type=button] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-width: 15ch;
-  text-decoration: none;
-  outline: 1px solid;
-  padding: var(--padding-1);
-  border-radius: 0.25em;
-  cursor: pointer;
-  font-weight: 600;
-  background-color: transparent;
-  transition: all 250ms ease-in-out;
-}
-.button:hover, .button:focus,
-button:hover,
-button:focus,
-input[type=submit]:hover,
-input[type=submit]:focus,
-input[type=button]:hover,
-input[type=button]:focus {
-  background-color: var(--grey);
-}
-
-button,
-.button {
-  max-width: fit-content;
-}
-
-button.theme,
-.button.theme {
-  color: var(--text);
-  background-color: var(--grey);
-}
-button.theme:hover, button.theme:focus,
-.button.theme:hover,
-.button.theme:focus {
-  background-color: var(--theme);
-}
-
-.button-group {
-  display: flex;
-  justify-content: center;
-  margin-block: var(--margin-2);
-  gap: var(--gap-3);
-}
-
 :where(a:link) {
   color: var(--text);
   font-weight: 500;
+  outline: transparent;
   text-decoration: underline;
   padding-inline: 0.125em;
   text-underline-offset: 0.125em;
 }
-:where(a:link):hover, :where(a:link):focus {
+:where(a:link):hover, :where(a:link):focus-visible {
   color: var(--clr-link);
 }
 :where(a:link):visited {
-  color: var(--clr-visited);
+  color: var(--clr-past);
 }
 
 @media print {

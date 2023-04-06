@@ -1,4 +1,16 @@
 // Pseudo Elements
+// Edge shadow
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: -10px;
+  height: 10px;
+  width: 100%;
+  box-shadow: var(--shadow-low);
+  z-index: 1;
+}
+
 a[href^="mailto"]::before {
   content: " \2709";
   font-size: 1.1em;
@@ -9,4 +21,70 @@ a[href^="tel"]::before {
   content: " \260F";
   font-size: 1.1em;
   margin-right: 0.25em;
+}
+
+// li markers
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
+  color: var(--theme);
+}
+// first p of first letter
+p:first-of-type::first-letter {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--theme);
+}
+
+// revise needed
+.cta-link:any-link {
+  color: forestgreen;
+  text-decoration-color: red;
+}
+
+// tags
+.tag-list {
+  display: flex;
+  gap: 1em;
+
+  li,
+  a {
+    display: inline-block;
+  }
+
+  a {
+    padding-inline: 1em;
+    border-radius: 0.2em;
+  }
+
+  a::before {
+    content: "#";
+  }
+}
+
+// Misc Elements
+time,
+address {
+  font-style: italic;
+  padding-left: 0.5em;
+}
+
+// For accessibility
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
 }

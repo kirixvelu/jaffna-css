@@ -1,4 +1,3 @@
-// CSS Resets
 /* Box sizing rules */
 *,
 *::before,
@@ -23,11 +22,9 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.4;
-  position: relative;
 }
 
 /* Remove default margin */
-// Updated ul, ol to the list
 body,
 h1,
 h2,

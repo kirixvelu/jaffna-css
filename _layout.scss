@@ -1,13 +1,11 @@
 // Smart Layouts
-// vertical center based on height
-.grid {
+// hero box
+.showcase {
   display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
-// horizontal flex and center
-.flex {
-  display: flex;
-}
-// single grid
+// solo grid
 .grid-uno {
   display: grid;
   min-height: 40vh;
@@ -19,7 +17,6 @@
 // multi-grid
 .grid-auto {
   display: grid;
-  margin-inline: auto;
   gap: var(--spacing-1);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
 }
