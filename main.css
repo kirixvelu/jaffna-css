@@ -679,6 +679,10 @@ section {
   margin-inline: auto;
   padding-inline: 1rem;
 }
+.content * + *,
+.content--padded * + * {
+  margin-top: var(--spacing-2);
+}
 
 .content--padded {
   padding-block: var(--padding-5);
