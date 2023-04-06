@@ -581,7 +581,7 @@ h6,
   --font-angle: 0;
   --font-ydepth: 79;
   --font-xdepth: 96;
-  /* fallback system fonts */
+  /* modern fallback fonts */
   --fb-system: system-ui, sans-serif;
   --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
     Arial, sans-serif;
@@ -614,8 +614,7 @@ h6,
     --text: hsl(0, 0%, 95%);
     --text-grey: hsl(0, 0%, 50%);
     --text-inverse: hsl(0, 0%, 5%);
-    --background: hsl(48, 81%, 47%);
-    --bg-transparent: hsla(0, 0%, 0%, 0.4);
+    --background: hsl(0, 0%, 20%);
     --theme: hsl(180, 50%, 45%);
     --theme-dark: hsl(180, 50%, 25%);
     --theme-light: hsl(180, 50%, 60%);
