@@ -9,14 +9,6 @@
   font-display: fallback;
   font-weight: 100 1000; /* prevents faux bolding in Safari */
   font-stretch: 25% 150%; /* required by Chrome */
-  // RobotoFlex Variant settings, digits only, symbols not permitted, each variable correspond to given CSS variable
-  font-variation-settings: "wght" var(--font-weight), "wdth" var(--font-stretch),
-    "opsz" var(--font-optics), "GRAD" var(--font-contrast),
-    "slnt" var(--font-angle), "XTRA" var(--font-spacing),
-    "XOPQ" var(--font-xdepth), "YOPQ" var(--font-ydepth),
-    "YTLC" var(--font-lowercase), "YTUC" var(--font-uppercase),
-    "YTAS" var(--font-ascender), "YTDE" var(--font-descender),
-    "YTFI" var(--font-figure);
 }
 
 /* Static fallback Font */

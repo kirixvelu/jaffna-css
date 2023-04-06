@@ -40,6 +40,9 @@ main,
 section,
 article {
   padding-block: 1rem;
+  * + * {
+    margin-top: var(--spacing-2); // universal spacing
+  }
 }
 
 section {

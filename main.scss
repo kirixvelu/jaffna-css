@@ -1,8 +1,8 @@
 // Jaffna CSS 3.0 Architecture
 @use "./fonts" as *;
 @use "./destyle" as *; // replace resets
-@use "./typeface" as *;
 @use "./theming" as *;
+@use "./typeface" as *;
 @use "./mixins" as *; // require import
 @use "./global" as *;
 @use "./layout" as *;

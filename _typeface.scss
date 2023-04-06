@@ -1,10 +1,30 @@
 // Typeface family
 body {
-  line-height: 1.15;
-  font-weight: 300;
-  font-stretch: condensed;
+  line-height: normal; //1.2
+  font-weight: normal; //400
+  font-stretch: normal; //100%
   text-rendering: optimizeSpeed;
   font-family: "RobotoFlex-Variable", "RobotoFlex-Regular", var(--fb-system); // more at fonts scss & theming scss
+
+  // Variable Axis Reference - RobotoFlex Properties defaults | range
+  //--font-optics: 14; //opsz 8 | 144;
+  // --font-weight: 400; //wght 100 | 1000
+  // --font-contrast: 0; //GRAD -200 | 150
+  // --font-stretch: 100; //wdth 25 | -151 // no % symbol
+  // --font-spacing: 468; //XTRA 323 | 603
+  // --font-ascender: 750; //YTAS 649 | 854
+  // --font-descender: -203; //YTDE -305 | -98
+  // --font-lowercase: 514; //YTLC 416 | 570
+  // --font-uppercase: 712; //YTUC 528 | 760
+  // --font-figure: 738; //YTFI 560 | 788
+  // --font-angle: 0; //slnt -10 | 0
+  // --font-ydepth: 79; //YOPQ 25 | 135
+  // --font-xdepth: 96; //XOPQ 27 | 175
+
+  // Only change the design required property, rest adapt to default, variation setting override common styles, progressive enhancement method
+  font-variation-settings: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "slnt" 0,
+    "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750,
+    "YTDE" -203, "YTFI" 738;
 }
 
 // content titles
@@ -26,66 +46,69 @@ h6 {
 // Utopia 320 to 1280, font 15 to 20, growth scale 1.25 to 1.5
 a,
 p,
-li {
-  font-size: var(--step-0);
+li,
+span {
+  font-size: var(--step-1);
+  font-weight: 300;
+  font-stretch: expanded;
+  font-variation-settings: "wght" 300, "wdth" 125;
 }
 
 small {
   font-size: var(--step--1);
 }
-
-blockquote p {
-  padding: var(--padding-1);
-  border-radius: var(--radius-1);
-}
-
-blockquote p::before {
-  content: "\201C";
-}
-
-blockquote p::after {
-  content: "\201D";
-}
+// Use appropriate class to override styles
 // Page Title
 .title,
 h1 {
   font-size: var(--step-5);
   text-align: center;
+  font-weight: 200;
+  font-stretch: condensed;
+  font-variation-settings: "wght" 200, "wdth" 75;
 }
-
+// Section Title
 .subtitle,
 h2 {
   font-size: var(--step-4);
 }
-// Section Heading
+// Component Heading
 .heading,
 h3 {
   font-size: var(--step-3);
+  font-weight: 800;
+  font-variation-settings: "wght" 800;
 }
-
+// Element Heading
 .subheading,
 h4 {
   font-size: var(--step-2);
 }
-
+// Bold Label
 h5,
 .label {
   font-size: var(--step-1);
-  text-transform: capitalize;
+  font-weight: 800;
+  font-variation-settings: "wght" 800;
 }
-
+// Capital Caption
 h6,
 .caption {
   font-size: var(--step-0);
   text-transform: uppercase;
+  font-stretch: extra-expanded;
+  font-variation-settings: "wdth" 150;
 }
 
 // Hero Text
-.giant {
-  line-height: 0.8;
-  font-weight: 1000;
+.hero-text {
+  line-height: 1;
   font-size: var(--step-6);
+  font-weight: 1000;
+  font-stretch: extra-condensed;
+  font-variation-settings: "wght" 1000, "wdth" 50;
 }
+
 // Block Elements
 .title,
 .subtitle,
@@ -93,7 +116,7 @@ h6,
 .subheading,
 .label,
 .caption,
-.giant {
+.hero-text {
   display: block;
   word-break: break-all;
 }

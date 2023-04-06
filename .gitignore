@@ -44,6 +44,7 @@ _element.scss
 _target.scss
 
 test.html
+test2.html
 
 # Exclude all js and css files
 *.js

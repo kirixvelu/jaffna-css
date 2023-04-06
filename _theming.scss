@@ -60,22 +60,6 @@
   --spacing-4: clamp(2em, 10%, 6em);
   --spacing-5: clamp(4em, 20%, 12em);
 
-  // Roboto Flex Variant Properties
-  --font-resize: auto; //none | auto
-  --font-optics: 14; //opsz 8 | 144;
-  --font-weight: 400; //wght 100 | 1000
-  --font-contrast: 0; //GRAD -200 | 150
-  --font-stretch: 100; //wdth 25 | -151 // no % symbol
-  --font-spacing: 468; //XTRA 323 | 603
-  --font-ascender: 750; //YTAS 649 | 854
-  --font-descender: -203; //YTDE -305 | -98
-  --font-lowercase: 514; //YTLC 416 | 570
-  --font-uppercase: 712; //YTUC 528 | 760
-  --font-figure: 738; //YTFI 560 | 788
-  --font-angle: 0; //slnt -10 | 0
-  --font-ydepth: 79; //YOPQ 25 | 135
-  --font-xdepth: 96; //XOPQ 27 | 175
-
   /* modern fallback fonts */
   --fb-system: system-ui, sans-serif; // text + heading
 
