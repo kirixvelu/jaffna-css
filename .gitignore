@@ -5,7 +5,7 @@ _hover.scss
 _range.scss
 _pseudo.scss
 _gallery.scss
-_shadow.scss
+_box-shadow.scss
 _vignette.scss
 _masonry.scss
 _lightbox.scss
@@ -30,10 +30,9 @@ _hero-anime.scss
 _hero-text.scss
 _hero-sign.scss
 _hero-sticky.scss
-_bg-angle.scss
-_bg-center.scss
+_coloring-2.scss
+_coloring-3.scss
 _bg-icons.scss
-_bg-linear.scss
 _bg-shapes.scss
 _hero-1.scss
 _hero-2.scss

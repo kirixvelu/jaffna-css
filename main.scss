@@ -3,6 +3,7 @@
 @use "./destyle" as *; // replace resets
 @use "./theming" as *;
 @use "./typeface" as *;
+@use "./coloring" as *;
 @use "./mixins" as *; // require import
 @use "./global" as *;
 @use "./layout" as *;
@@ -11,9 +12,8 @@
 @use "./links" as *;
 // @use "./element" as *;
 // @use "./feature" as *;
-// @use "./bg-linear" as *;
-// @use "./bg-center" as *;
-// @use "./bg-angle" as *;
+// @use "./coloring-3" as *;
+// @use "./coloring-2" as *;
 // @use "./bg-shapes" as *;
 // @use "./bg-icons" as *;
 // @use "./hero-1" as *;
@@ -39,7 +39,7 @@
 // @use "./lightbox" as *;
 // @use "./gallery" as *;
 // @use "./vignette" as *;
-// @use "./shadow" as *;
+// @use "./box-shadow" as *;
 // @use "./carousel" as *;
 // @use "./masonry" as *;
 // @use "./decor" as *;

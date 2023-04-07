@@ -1,17 +1,25 @@
 // Smart Layouts
-// hero box
-.showcase {
+// Full width, centered & padded
+.grid-half,
+.grid-third,
+.grid-full {
   display: grid;
   place-content: center;
-  min-height: 100vh;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  width: min(100%, 80em);
 }
-// solo grid
-.grid-uno {
-  display: grid;
-  min-height: 40vh;
-  padding-inline: 10vw;
-  place-content: center;
-  background: var(--theme-glassy);
+// half hero box
+.grid-half {
+  min-height: 45vh;
+}
+// third hero box
+.grid-third {
+  min-height: 70vh;
+}
+// full hero box
+.grid-full {
+  min-height: 100vh;
 }
 
 // multi-grid

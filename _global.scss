@@ -27,24 +27,21 @@ footer {
 // primary container
 header,
 main,
-article,
 section,
 footer {
+  display: block;
   // use content wrapper for each
   // do not nest content wrappers
   // see backgrounds & colors in theme
   // see backgrounds & shapes for svg visuals
 }
 
-main,
-section,
 article {
-  padding-block: 1rem;
-  * + * {
-    margin-top: var(--spacing-2); // universal spacing
-  }
+  padding-inline: 1rem;
+  margin-inline: auto;
 }
 
+main,
 section {
   display: flex;
   flex-direction: column;
@@ -52,8 +49,7 @@ section {
   position: relative; // required for visual elements
   min-height: 10rem;
 }
-
-// container maxed at 1280px
+// content box - capped, centered & padded at 1280px
 .content,
 .content--padded {
   width: min(100%, 80em);
@@ -66,9 +62,7 @@ section {
 
 .content--padded {
   padding-block: var(--padding-5);
-  // For positioning, coloring & graphics
-  // SVG graphics not to exceed 150px height
-  // optional padding-block: calc(250px + 1.5vw);
+  // For positioning, coloring & graphics up to 150px height
 }
 
 // block element
@@ -113,25 +107,26 @@ iframe {
 
 em {
   font-style: italic; // emphasizes to word
+  font-stretch: extra-expanded;
+  font-variation-settings: "slnt" -8, "wdth" 150;
 }
 
-strong {
-  font-style: bold; // importance to statement
-}
-
-dfn {
-  font-style: bold; // definition of word in context
+strong,
+dfn,
+var,
+dt {
+  font-style: bold;
+  font-weight: 700; // importance to statement
+  font-stretch: extra-expanded;
+  font-variation-settings: "wght" 700, "wdth" 150;
 }
 
 q {
   padding-block: var(--padding-1); // attention to quote
 }
-var {
-  font-weight: bold; // describe mathematic equations
-}
 
 small {
-  font-size: 75%; // less important but required text
+  font-size: var(--step--1); // less important but required text
 }
 del {
   text-decoration: line-through; // deleted text
@@ -153,10 +148,6 @@ dl {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding-block: 1em;
-}
-
-dt {
-  font-weight: bold; // term
 }
 
 dd {

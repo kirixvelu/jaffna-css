@@ -36,12 +36,6 @@ p:first-of-type::first-letter {
   color: var(--theme);
 }
 
-// revise needed
-.cta-link:any-link {
-  color: forestgreen;
-  text-decoration-color: red;
-}
-
 // tags
 .tag-list {
   display: flex;
