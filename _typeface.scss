@@ -6,20 +6,20 @@ body {
   text-rendering: optimizeSpeed;
   font-family: "RobotoFlex-Variable", "RobotoFlex-Regular", var(--fb-system); // more at fonts scss & theming scss
 
-  // Variable Axis Reference - RobotoFlex Properties defaults | range
-  //--font-optics: 14; //opsz 8 | 144;
-  // --font-weight: 400; //wght 100 | 1000
-  // --font-contrast: 0; //GRAD -200 | 150
-  // --font-stretch: 100; //wdth 25 | -151 // no % symbol
-  // --font-spacing: 468; //XTRA 323 | 603
-  // --font-ascender: 750; //YTAS 649 | 854
-  // --font-descender: -203; //YTDE -305 | -98
-  // --font-lowercase: 514; //YTLC 416 | 570
-  // --font-uppercase: 712; //YTUC 528 | 760
-  // --font-figure: 738; //YTFI 560 | 788
+  // Variable Axis Reference - RobotoFlex Properties defaults | range | optimization
+  // --font-weight: 400; //wght 100 | 1000 (body 300 | title 150)
+  // --font-stretch: 100; //wdth 25 | -151 // no % symbol (body -75 | title -50)
+  //--font-optical: 14; //opsz 8 | 144; (body 16 | Title 8)
+  // --font-contrast: 0; //GRAD -200 | 150 (body 25 | title 75)
+  // --font-figure: 738; //YTFI 560 | 788 (body 600 | title 650)
+  // --font-uppercase: 712; //YTUC 528 | 760 (body 625 | title 700)
+  // --font-lowercase: 514; //YTLC 416 | 570 (body 450 | title 500)
+  // --font-stroke: 79; //YOPQ 25 | 135 (body 70 | title 50)
+  // --font-depth: 96; //XOPQ 27 | 175 (body 100 | title 125 )
+  // --font-descender: -203; //YTDE -305 | -98  (body  -175 | title -150)
+  // --font-ascender: 750; //YTAS 649 | 854 (body 800 title 700)
+  // --font-length: 468; //XTRA 323 | 603 (body 450 | title 400)
   // --font-angle: 0; //slnt -10 | 0
-  // --font-ydepth: 79; //YOPQ 25 | 135
-  // --font-xdepth: 96; //XOPQ 27 | 175
 
   // Only change the design required property, rest adapt to default, variation setting override common styles, progressive enhancement method
   font-variation-settings: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "slnt" 0,
@@ -83,6 +83,7 @@ h3 {
 .subheading,
 h4 {
   font-size: var(--step-2);
+  border-bottom: 2px solid;
 }
 // Bold Label
 h5,
