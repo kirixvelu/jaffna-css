@@ -4,7 +4,7 @@
 
 - License [Project](https://kiri-vadivelu.ca/license.txt)
 - Build System [11TY](https://11ty.dev/)
-- Web Architecture [Principles](https://jamstack.org/)
+- Web Architecture [Jamstack](https://jamstack.org/)
 - Design Team [Digital Designers](https://digitaldesigners.ca)
 
 The project was researched, designed and developed by Digital Designers Team in the city of Toronto. Digital Designers is a web design company that specializes in deploying modern portfolio websites, search engine optimizations and social media marketing.
