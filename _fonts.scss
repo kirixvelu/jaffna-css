@@ -1,5 +1,5 @@
 // Font Family
-/* Variant Sans Fonts */
+/* variant fonts */
 @font-face {
   font-family: "RobotoFlex-Variable";
   src: url("../fonts/RobotoFlex-Variable.woff2") format("woff2-variations"),
@@ -11,7 +11,7 @@
   font-stretch: 25% 150%; /* required by Chrome */
 }
 
-/* Static fallback Font */
+/* fallback font */
 @font-face {
   font-family: "RobotoFlex-Regular";
   src: url("../fonts/RobotoFlex-Regular.woff") format("woff");
@@ -19,28 +19,7 @@
   font-display: fallback; /* method of loading font */
 }
 
-// /* Variant Serif Fonts */
-// @font-face {
-//   font-family: "RobotoSerif-Variable";
-//   src: url("../fonts/RobotoSerif-VF.woff2") format("woff2-variations"),
-//     url("./icons/RobotoFlex-VF.woff2") format("woff2");
-//   // safari requires format with variations but its deprecated
-//   font-style: normal;
-//   font-display: fallback;
-//   font-weight: 100 900; /* prevents faux bolding in Safari */
-//   font-stretch: 50 150;
-// }
-
-// RobotoSerif Variant settings, digits only, symbols not permitted
-
-// /* Static fallback Font */
-// @font-face {
-//   font-family: "RobotoSerif-Regular";
-//   src: url("../fonts/RobotoSerif-Regular.woff") format("woff");
-//   font-style: normal;
-//   font-display: fallback; /* method of loading font */
-// }
-
+/* Nice to Know */
 // The terms font and typeface are often used interchangeably by developers. However there is a difference: A typeface is the underlying visual design that can exist in many different typesetting technologies, and a font is one of these implementations, in a digital file format. In other words, a typeface is what you see, and the font is what you use.
 
 // Another concept that is often overlooked is the distinction between a style, and a family. A style is a single and specific typeface, such as Bold Italic, and a family is the complete set of styles.

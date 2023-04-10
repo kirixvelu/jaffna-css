@@ -1,6 +1,6 @@
 // variables
 :root {
-  /* color Variables */
+  /* color variables */
   --text: hsl(0, 0%, 5%);
   --text-grey: hsl(0, 0%, 55%);
   --text-inverse: hsl(0, 0%, 95%);
@@ -25,42 +25,86 @@
   --white: hsl(0, 0%, 90%);
   --white-light: hsl(0, 0%, 95%);
   --white-dark: hsl(0, 0%, 85%);
-
+  // accessible colors
   --clr-okay: hsl(110, 100%, 30%);
   --clr-hint: hsl(0, 75%, 50%);
   --clr-mark: hsl(45, 100%, 50%);
   --clr-link: hsl(215, 75%, 50%);
   --clr-past: hsl(300, 100%, 25%);
-  // Creative shadow (neon, black, theme or accent)
-  --shadow-color: 0deg 0% 0%; // default black without saturation and brightness
-  --filter-color: 0deg 100% 50%;
-  --inset-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.25); // For global elements only
+  // options (neon, black, theme or accent)
+  --shadow-color: 0deg 0% 0%; // default black
+  --filter-color: 0deg 0% 0%; // default black
+  --inset-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.25);
   // Form elements (neon, black, theme or accent)
   accent-color: var(--theme); // default vary depending on browser vendor
 
-  /* Properties */
+  /* paddings and spacings */
   --px-1: 1px;
   --px-2: 2px;
   --px-3: 3px;
   --px-4: 4px;
   --px-5: 5px;
-  --em-1: 0.25em;
-  --em-2: 0.5em;
-  --em-3: 1em;
-  --em-4: 1.5em;
-  --em-5: 3em;
-  --padding-1: clamp(0.25em, 1.75%, 0.5em);
-  --padding-2: clamp(0.5em, 2.5%, 1em);
-  --padding-3: clamp(1em, 5%, 2em);
-  --padding-4: clamp(2em, 10%, 6em);
-  --padding-5: clamp(4em, 20%, 12em);
-  --spacing-1: clamp(0.25em, 1.75%, 0.5em);
-  --spacing-2: clamp(0.5em, 2.5%, 1em);
-  --spacing-3: clamp(1em, 5%, 2em);
-  --spacing-4: clamp(2em, 10%, 6em);
-  --spacing-5: clamp(4em, 20%, 12em);
 
-  /* modern fallback fonts */
+  --em-less: 0.25em;
+  --em-half: 0.5em;
+  --em-third: 0.75em;
+  --em-full: 1em;
+  --em-double: 2em;
+  --em-triple: 3em;
+
+  --padding-less: clamp(0.25em, 1.75%, 0.5em);
+  --padding-half: clamp(0.5em, 2.5%, 1em);
+  --padding-third: clamp(0.75em, 3.75%, 1.5em);
+  --padding-full: clamp(1em, 5%, 2em);
+  --padding-double: clamp(2em, 10%, 6em);
+  --padding-triple: clamp(3em, 15%, 9em);
+
+  --spacing-less: clamp(0.25em, 1.75%, 0.5em);
+  --spacing-half: clamp(0.5em, 2.5%, 1em);
+  --spacing-third: clamp(0.75em, 3.75%, 1.5em);
+  --spacing-full: clamp(1em, 5%, 2em);
+  --spacing-double: clamp(2em, 10%, 6em);
+  --spacing-triple: clamp(3em, 15%, 9em);
+
+  // variant settings
+  --options-base: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 468,
+    "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738,
+    "XOPQ" 96, "slnt" 0;
+
+  // normal
+  --options-body: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+    "YOPQ" 79, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  --options-body-bold: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+    "YOPQ" 79, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  --options-body-slant: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+    "YOPQ" 79, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" -10;
+
+  // heading
+  --options-heading: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+    "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  // bold large
+  --options-hero: "wght" 1000, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+    "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  // narrow bold
+  --options-label: "wght" 650, "wdth" 50, "opsz" 14, "GRAD" 0, "XTRA" 400,
+    "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  // wide uppercase
+  --options-caption: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 603,
+    "YOPQ" 135, "YTLC" 475, "YTUC" 528, "YTAS" 800, "YTDE" -150, "YTFI" 650,
+    "XOPQ" 96, "slnt" 0;
+
+  /* fallback fonts */
   --fb-system: system-ui, sans-serif; // text + heading
 
   --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
@@ -84,17 +128,18 @@
   --fb-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
     cursive; // writing
 
-  // Font Sizing
-  --step--2: clamp(0.56rem, calc(0.61rem + -0.07vw), 0.6rem);
-  --step--1: clamp(0.75rem, calc(0.72rem + 0.14vw), 0.83rem);
-  --step-0: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
-  --step-1: clamp(1.17rem, calc(0.93rem + 1.22vw), 1.88rem);
-  --step-2: clamp(1.47rem, calc(1rem + 2.34vw), 2.81rem);
-  --step-3: clamp(1.83rem, calc(1rem + 4.15vw), 4.22rem);
-  --step-4: clamp(2.29rem, calc(0.88rem + 7.03vw), 6.33rem);
-  --step-5: clamp(2.86rem, calc(0.55rem + 11.53vw), 9.49rem);
-  --step-6: clamp(3.58rem, calc(-0.13rem + 18.54vw), 14.24rem);
-  --step-7: clamp(4.47rem, calc(-1.4rem + 29.37vw), 21.36rem);
+  // Utopia sizing (320-1280 @1.333, -1 to 9)
+  --step--1: clamp(0.75rem, calc(0.63rem + 0.63vw), 1.13rem);
+  --step-0: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
+  --step-1: clamp(1.33rem, calc(1.11rem + 1.11vw), 2rem);
+  --step-2: clamp(1.78rem, calc(1.48rem + 1.48vw), 2.67rem);
+  --step-3: clamp(2.37rem, calc(1.97rem + 1.97vw), 3.55rem);
+  --step-4: clamp(3.16rem, calc(2.63rem + 2.63vw), 4.74rem);
+  --step-5: clamp(4.21rem, calc(3.51rem + 3.51vw), 6.31rem);
+  --step-6: clamp(5.61rem, calc(4.67rem + 4.68vw), 8.42rem);
+  --step-7: clamp(7.48rem, calc(6.23rem + 6.23vw), 11.22rem);
+  --step-8: clamp(9.97rem, calc(8.31rem + 8.31vw), 14.95rem);
+  --step-9: clamp(13.29rem, calc(11.07rem + 11.07vw), 19.93rem);
 }
 
 @media (prefers-color-scheme: dark) {

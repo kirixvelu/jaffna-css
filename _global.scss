@@ -2,43 +2,27 @@
 html {
   color: var(--text);
   background-color: var(--background);
-  scroll-padding-top: 2rem; // optional
+  scroll-padding-top: 2rem; // below navigation
+  scroll-behavior: smooth;
+  // Font Rendering
 }
 
 body {
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; // optional
+  overflow-x: hidden; // no horizontal scroll
   min-height: 100vh;
 }
 
-header {
-  min-height: 1rem;
+// Keep footer at bottom
+footer {
+  margin-top: auto;
 }
 
 header,
 footer {
   padding-block: 1rem;
-}
-
-footer {
-  margin-top: auto;
-}
-// primary container
-header,
-main,
-section,
-footer {
-  display: block;
-  // use content wrapper for each
-  // do not nest content wrappers
-  // see backgrounds & colors in theme
-  // see backgrounds & shapes for svg visuals
-}
-
-article {
   padding-inline: 1rem;
-  margin-inline: auto;
 }
 
 main,
@@ -47,29 +31,30 @@ section {
   flex-direction: column;
   justify-content: center;
   position: relative; // required for visual elements
-  min-height: 10rem;
 }
 // content box - capped, centered & padded at 1280px
-.content,
-.content--padded {
+
+// internal wrappers
+.main,
+.section,
+.header,
+.footer {
   width: min(100%, 80em);
   margin-inline: auto;
   padding-inline: 1rem;
-  * + * {
-    margin-top: var(--spacing-2); // universal spacing
-  }
+  // content box - capped, centered & padded at 1280px
 }
 
-.content--padded {
-  padding-block: var(--padding-5);
+.main--padded,
+.section--padded {
+  padding-block: var(--padding-double);
   // For positioning, coloring & graphics up to 150px height
 }
 
 // block element
 hr {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  border-radius: var(--radius-1);
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 ul,
@@ -82,7 +67,7 @@ ol {
 img,
 picture {
   margin-inline: auto;
-  border-radius: var(--radius-1);
+  border-radius: var(--px-5);
 }
 
 audio,
@@ -101,55 +86,4 @@ audio {
 iframe {
   border: 1px solid black;
   width: 100%; /* takes precedence over the width set with the HTML width attribute */
-}
-
-// semantic use in p or span
-
-em {
-  font-style: italic; // emphasizes to word
-  font-stretch: extra-expanded;
-  font-variation-settings: "slnt" -8, "wdth" 150;
-}
-
-strong,
-dfn,
-var,
-dt {
-  font-style: bold;
-  font-weight: 700; // importance to statement
-  font-stretch: extra-expanded;
-  font-variation-settings: "wght" 700, "wdth" 150;
-}
-
-q {
-  padding-block: var(--padding-1); // attention to quote
-}
-
-small {
-  font-size: var(--step--1); // less important but required text
-}
-del {
-  text-decoration: line-through; // deleted text
-  background-color: #fbb;
-  color: #555;
-}
-
-ins {
-  text-decoration: none; // replaced text
-  background-color: green;
-}
-
-hgroup {
-  border-bottom: 1px solid; // contain heading and subheading
-}
-
-dl {
-  // contain description list
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding-block: 1em;
-}
-
-dd {
-  margin-bottom: 0.5em; // description
 }

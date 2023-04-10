@@ -1,69 +1,32 @@
-// Jaffna CSS 3.0 Architecture
+// Jaffna CSS 3.0 Architecture | License: MIT License
+// Author: Kiri Vadivelu | https://github.com/kiri-vadivelu/jaffna-css
 @use "./fonts" as *;
 @use "./destyle" as *; // replace resets
 @use "./theming" as *;
-@use "./typeface" as *;
-@use "./coloring" as *;
-@use "./mixins" as *; // require import
 @use "./global" as *;
+@use "./typeface" as *;
+@use "./mixins" as *; // require import
 @use "./layout" as *;
+@use "./component" as *;
+@use "./animation" as *;
+@use "./transition" as *;
+@use "./coloring" as *;
 @use "./button" as *;
-@use "./cards" as *;
 @use "./links" as *;
-// @use "./element" as *;
-// @use "./feature" as *;
-// @use "./coloring-3" as *;
-// @use "./coloring-2" as *;
-// @use "./bg-shapes" as *;
-// @use "./bg-icons" as *;
-// @use "./hero-1" as *;
-// @use "./hero-2" as *;
-// @use "./hero-3" as *;
-// @use "./hero-4" as *;
-// @use "./hero-motion" as *;
-// @use "./hero-parallax" as *;
-// @use "./hero-sticky" as *;
-// @use "./hero-image" as *;
-// @use "./hero-text" as *;
-// @use "./hero-sign" as *;
-// @use "./hero-anime" as *;
-// @use "./hero-stroke" as *;
-// @use "./hero-stack" as *;
-// @use "./hero-rotate" as *;
-// @use "./facepile" as *;
-// @use "./target" as *;
-// @use "./input" as *;
-// @use "./form" as *;
-// @use "./range" as *;
-// @use "./toggle" as *;
-// @use "./lightbox" as *;
-// @use "./gallery" as *;
-// @use "./vignette" as *;
-// @use "./box-shadow" as *;
-// @use "./carousel" as *;
-// @use "./masonry" as *;
-// @use "./decor" as *;
-// @use "./hover" as *;
-// @use "./transition" as *;
-// @use "./observer" as *;
-// @use "./scroller" as *;
-// @use "./timeline" as *;
-// @use "./pseudo" as *;
-@use "./print" as *;
+@use "./print" as *; // for print only
 
-// Guide notes
-// fonts - rem default
-// utopia responsive
-// gaps / margin - rem
-// widths / padding - em
-// max / min - ch
+// Notes
+// fonts - rem/responsive/utopia
+// gaps - margin/rem
+// width/padding - em/rem
+// max/min - ch
 // borders, outline - px
 // cards capped at 20em
 // articles capped at 80ch
 // containers capped at 80em/ 1280px
 // mixins require import
 
-// Special Thanks
+// Thanks
 // Eric Meyer @meyerweb
 // Stephanie Eckles @5t3ph
 // Brad Traversy @traversymedia
