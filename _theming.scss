@@ -39,32 +39,25 @@
   accent-color: var(--theme); // default vary depending on browser vendor
 
   /* paddings and spacings */
-  --px-1: 1px;
-  --px-2: 2px;
-  --px-3: 3px;
-  --px-4: 4px;
-  --px-5: 5px;
+  --stroke-1: 1px;
+  --stroke-2: 2px;
+  --stroke-3: 3px;
+  --stroke-4: 4px;
+  --stroke-5: 5px;
 
-  --em-less: 0.25em;
-  --em-half: 0.5em;
-  --em-third: 0.75em;
-  --em-full: 1em;
-  --em-double: 2em;
-  --em-triple: 3em;
+  --space-025: 0.25em;
+  --space-050: 0.5em;
+  --space-075: 0.75em;
+  --space-100: 1em;
+  --space-200: 2em;
+  --space-300: 3em;
 
-  --padding-less: clamp(0.25em, 1.75%, 0.5em);
-  --padding-half: clamp(0.5em, 2.5%, 1em);
-  --padding-third: clamp(0.75em, 3.75%, 1.5em);
-  --padding-full: clamp(1em, 5%, 2em);
-  --padding-double: clamp(2em, 10%, 6em);
-  --padding-triple: clamp(3em, 15%, 9em);
-
-  --spacing-less: clamp(0.25em, 1.75%, 0.5em);
-  --spacing-half: clamp(0.5em, 2.5%, 1em);
-  --spacing-third: clamp(0.75em, 3.75%, 1.5em);
-  --spacing-full: clamp(1em, 5%, 2em);
-  --spacing-double: clamp(2em, 10%, 6em);
-  --spacing-triple: clamp(3em, 15%, 9em);
+  --fluid-space-025: clamp(0.25em, 1.75%, 0.5em);
+  --fluid-space-050: clamp(0.5em, 2.5%, 1em);
+  --fluid-space-075: clamp(0.75em, 3.75%, 1.5em);
+  --fluid-space-100: clamp(1em, 5%, 2em);
+  --fluid-space-200: clamp(2em, 10%, 6em);
+  --fluid-space-300: clamp(3em, 15%, 9em);
 
   // variant settings
   --options-base: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 468,
@@ -85,47 +78,47 @@
     "XOPQ" 96, "slnt" -10;
 
   // heading
-  --options-heading: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+  --options-head: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
 
   // bold large
-  --options-hero: "wght" 1000, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+  --options-bold: "wght" 1000, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
 
   // narrow bold
-  --options-label: "wght" 650, "wdth" 50, "opsz" 14, "GRAD" 0, "XTRA" 400,
+  --options-tall: "wght" 650, "wdth" 50, "opsz" 14, "GRAD" 0, "XTRA" 400,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
 
   // wide uppercase
-  --options-caption: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 603,
+  --options-wide: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 603,
     "YOPQ" 135, "YTLC" 475, "YTUC" 528, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
 
   /* fallback fonts */
-  --fb-system: system-ui, sans-serif; // text + heading
+  --family-system: system-ui, sans-serif; // text + heading
 
-  --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-    Arial, sans-serif; // text + heading
+  --family-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+    "Nimbus Sans", Arial, sans-serif; // text + heading
 
-  --fb-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel, "URW Gothic",
+  --family-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel,
+    "URW Gothic", source-sans-pro, sans-serif; // text
+
+  --family-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
     source-sans-pro, sans-serif; // text
 
-  --fb-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    source-sans-pro, sans-serif; // text
+  --family-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
+    P052, Sylfaen, serif; // heading
 
-  --fb-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052,
-    Sylfaen, serif; // heading
-
-  --fb-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+  --family-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
     "Nimbus Sans Narrow", sans-serif-condensed, sans-serif; // heading
 
-  --fb-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+  --family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; // coding
 
-  --fb-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+  --family-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
     cursive; // writing
 
   // Utopia sizing (320-1280 @1.333, -1 to 9)

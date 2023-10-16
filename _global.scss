@@ -1,4 +1,5 @@
-// structure
+@use "breakpoints" as b;
+
 html {
   color: var(--text);
   background-color: var(--background);
@@ -86,4 +87,30 @@ audio {
 iframe {
   border: 1px solid black;
   width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+.responsive-test {
+  @include b.xs {
+    color: b;
+  }
+
+  @include b.sm {
+    color: green;
+  }
+
+  @include b.md {
+    color: red;
+  }
+
+  @include b.lg {
+    color: purple;
+  }
+
+  @include b.xl {
+    color: orange;
+  }
+
+  @include b.xxl {
+    color: pink;
+  }
 }

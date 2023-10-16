@@ -41,6 +41,7 @@ _hero-sign.scss
 _hero-sticky.scss
 _coloring-2.scss
 _coloring-3.scss
+_navigation.scss
 
 test.html
 test2.html
@@ -48,4 +49,5 @@ test2.html
 # Exclude all js and css files
 *.js
 *.css
+*.map
 

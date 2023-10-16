@@ -1,19 +1,20 @@
 // Jaffna CSS 3.0 Architecture | License: MIT License
 // Author: Kiri Vadivelu | https://github.com/kiri-vadivelu/jaffna-css
-@use "./fonts" as *;
-@use "./destyle" as *; // replace resets
-@use "./theming" as *;
-@use "./global" as *;
-@use "./typeface" as *;
-@use "./mixins" as *; // require import
-@use "./layout" as *;
-@use "./component" as *;
-@use "./animation" as *;
-@use "./transition" as *;
-@use "./coloring" as *;
-@use "./button" as *;
-@use "./links" as *;
-@use "./print" as *; // for print only
+@use "./fonts";
+@use "./destyle"; // resets
+@use "./theming";
+@use "./global";
+@use "./typeface";
+@use "./breakpoints"; // require use
+@use "./navigation";
+@use "./layout";
+@use "./component";
+@use "./animation";
+@use "./transition";
+@use "./coloring";
+@use "./button";
+@use "./links";
+@use "./print"; // for print only
 
 // Notes
 // fonts - rem/responsive/utopia

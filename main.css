@@ -152,7 +152,8 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -227,7 +228,8 @@ optgroup,
 select,
 textarea {
   -webkit-appearance: none; /* 1 */
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -400,10 +402,12 @@ th {
     scroll-behavior: auto;
   }
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -452,29 +456,23 @@ th {
   --inset-shadow: inset 0 0 20px -10px rgba(0, 0, 0, 0.25);
   accent-color: var(--theme);
   /* paddings and spacings */
-  --px-1: 1px;
-  --px-2: 2px;
-  --px-3: 3px;
-  --px-4: 4px;
-  --px-5: 5px;
-  --em-less: 0.25em;
-  --em-half: 0.5em;
-  --em-third: 0.75em;
-  --em-full: 1em;
-  --em-double: 2em;
-  --em-triple: 3em;
-  --padding-less: clamp(0.25em, 1.75%, 0.5em);
-  --padding-half: clamp(0.5em, 2.5%, 1em);
-  --padding-third: clamp(0.75em, 3.75%, 1.5em);
-  --padding-full: clamp(1em, 5%, 2em);
-  --padding-double: clamp(2em, 10%, 6em);
-  --padding-triple: clamp(3em, 15%, 9em);
-  --spacing-less: clamp(0.25em, 1.75%, 0.5em);
-  --spacing-half: clamp(0.5em, 2.5%, 1em);
-  --spacing-third: clamp(0.75em, 3.75%, 1.5em);
-  --spacing-full: clamp(1em, 5%, 2em);
-  --spacing-double: clamp(2em, 10%, 6em);
-  --spacing-triple: clamp(3em, 15%, 9em);
+  --stroke-1: 1px;
+  --stroke-2: 2px;
+  --stroke-3: 3px;
+  --stroke-4: 4px;
+  --stroke-5: 5px;
+  --space-025: 0.25em;
+  --space-050: 0.5em;
+  --space-075: 0.75em;
+  --space-100: 1em;
+  --space-200: 2em;
+  --space-300: 3em;
+  --fluid-space-025: clamp(0.25em, 1.75%, 0.5em);
+  --fluid-space-050: clamp(0.5em, 2.5%, 1em);
+  --fluid-space-075: clamp(0.75em, 3.75%, 1.5em);
+  --fluid-space-100: clamp(1em, 5%, 2em);
+  --fluid-space-200: clamp(2em, 10%, 6em);
+  --fluid-space-300: clamp(3em, 15%, 9em);
   --options-base: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 468,
     "YOPQ" 79, "YTLC" 514, "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738,
     "XOPQ" 96, "slnt" 0;
@@ -487,33 +485,33 @@ th {
   --options-body-slant: "wght" 400, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
     "YOPQ" 79, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" -10;
-  --options-heading: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+  --options-head: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
-  --options-hero: "wght" 1000, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
+  --options-bold: "wght" 1000, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 500,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
-  --options-label: "wght" 650, "wdth" 50, "opsz" 14, "GRAD" 0, "XTRA" 400,
+  --options-tall: "wght" 650, "wdth" 50, "opsz" 14, "GRAD" 0, "XTRA" 400,
     "YOPQ" 25, "YTLC" 475, "YTUC" 712, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
-  --options-caption: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 603,
+  --options-wide: "wght" 650, "wdth" 100, "opsz" 14, "GRAD" 0, "XTRA" 603,
     "YOPQ" 135, "YTLC" 475, "YTUC" 528, "YTAS" 800, "YTDE" -150, "YTFI" 650,
     "XOPQ" 96, "slnt" 0;
   /* fallback fonts */
-  --fb-system: system-ui, sans-serif;
-  --fb-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
-    Arial, sans-serif;
-  --fb-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel, "URW Gothic",
+  --family-system: system-ui, sans-serif;
+  --family-grotesque: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+    "Nimbus Sans", Arial, sans-serif;
+  --family-geometric: Avenir, "Avenir Next LT Pro", Montserrat, Corbel,
+    "URW Gothic", source-sans-pro, sans-serif;
+  --family-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
     source-sans-pro, sans-serif;
-  --fb-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
-    source-sans-pro, sans-serif;
-  --fb-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052,
-    Sylfaen, serif;
-  --fb-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+  --family-modern: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
+    P052, Sylfaen, serif;
+  --family-industrial: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
     "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
-  --fb-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+  --family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace;
-  --fb-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+  --family-cursive: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
     cursive;
   --step--1: clamp(0.75rem, calc(0.63rem + 0.63vw), 1.13rem);
   --step-0: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
@@ -639,6 +637,37 @@ audio {
 iframe {
   border: 1px solid black;
   width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+
+@media (min-width: 0) {
+  .responsive-test {
+    color: b;
+  }
+}
+@media (min-width: 30em) {
+  .responsive-test {
+    color: green;
+  }
+}
+@media (min-width: 45em) {
+  .responsive-test {
+    color: red;
+  }
+}
+@media (min-width: 60em) {
+  .responsive-test {
+    color: purple;
+  }
+}
+@media (min-width: 75em) {
+  .responsive-test {
+    color: orange;
+  }
+}
+@media (min-width: 100em) {
+  .responsive-test {
+    color: pink;
+  }
 }
 
 html {
@@ -778,6 +807,70 @@ dd {
   font-variation-settings: var(--options-hero);
 }
 
+.nav {
+  border-bottom: 1px solid;
+}
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  margin: 0rem 1rem;
+  right: 0;
+}
+.nav__toggle .close,
+.nav__toggle .menu {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.nav__toggle .close {
+  display: none;
+}
+.nav__checkbox {
+  display: none;
+}
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem;
+}
+.nav__menu li {
+  list-style: none;
+  display: none;
+}
+.nav__menu li:first-child {
+  margin-right: auto;
+  display: block;
+}
+.nav__menu a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+@media only screen and (min-width: 720px) {
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu {
+    flex-direction: row;
+  }
+  .nav__menu li {
+    display: block;
+  }
+}
 .grid-half,
 .grid-third,
 .grid-full {
@@ -959,11 +1052,28 @@ dialog {
   padding: var(--spacing);
 }
 
+dialog::-webkit-backdrop {
+  background: var(--theme);
+  backdrop-filter: blur(0.15em);
+  -webkit-backdrop-filter: blur(0.15em);
+  -webkit-transition: -webkit-backdrop-filter 250ms ease-in-out;
+  transition: -webkit-backdrop-filter 250ms ease-in-out;
+  transition: backdrop-filter 250ms ease-in-out;
+  transition: backdrop-filter 250ms ease-in-out, -webkit-backdrop-filter 250ms ease-in-out;
+}
+
 dialog::backdrop {
   background: var(--theme);
   backdrop-filter: blur(0.15em);
   -webkit-backdrop-filter: blur(0.15em);
+  transition: -webkit-backdrop-filter 250ms ease-in-out;
   transition: backdrop-filter 250ms ease-in-out;
+  transition: backdrop-filter 250ms ease-in-out, -webkit-backdrop-filter 250ms ease-in-out;
+}
+
+::-moz-selection {
+  background-color: var(--hover);
+  color: var(--text);
 }
 
 ::selection {
@@ -990,6 +1100,15 @@ dialog::backdrop {
   border-radius: var(--b-radius);
 }
 
+@-webkit-keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes pageFadeIn {
   from {
     opacity: 0;
@@ -1000,10 +1119,14 @@ dialog::backdrop {
 }
 body {
   opacity: 0;
-  animation: pageFadeIn ease-in 1;
-  animation-fill-mode: forwards;
-  animation-duration: 250ms;
-  animation-delay: 250ms;
+  -webkit-animation: pageFadeIn ease-in 1;
+          animation: pageFadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
 }
 
 .transitions > * {
@@ -1107,6 +1230,8 @@ input[type=button]:focus-visible {
 
 button,
 .button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 
@@ -1177,31 +1302,31 @@ button.accent:hover, button.accent:focus-visible,
 
 @media print {
   body,
-  summary,
-  details,
-  button,
-  input,
-  textarea {
+summary,
+details,
+button,
+input,
+textarea {
     background-color: #fff;
   }
   button,
-  input,
-  textarea {
+input,
+textarea {
     border: 1px solid #000;
   }
   body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  button,
-  input,
-  textarea,
-  footer,
-  summary,
-  strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+textarea,
+footer,
+summary,
+strong {
     color: #000;
   }
   summary::marker {
