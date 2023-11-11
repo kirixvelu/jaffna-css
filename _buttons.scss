@@ -16,14 +16,16 @@ input[type="button"] {
   font-weight: 600;
   font-stretch: normal;
   line-height: 1;
-  font-size: var(--step-0);
-  padding-block: var(--padding-1);
+  font-size: var(--sizing-0);
+  padding-block: var(--spacing-1);
   text-transform: uppercase;
+  color: var(--text);
   background-color: transparent;
   transition: all 250ms ease-in-out;
 
   &:hover,
   &:focus-visible {
+    color: var(--text-invert);
     background-color: var(--theme);
   }
 }
@@ -76,10 +78,4 @@ button.accent,
   &:focus-visible {
     background-color: transparent;
   }
-}
-
-.btn-group {
-  display: flex;
-  gap: var(--spacing-1);
-  margin-block: var(--spacing-1);
 }

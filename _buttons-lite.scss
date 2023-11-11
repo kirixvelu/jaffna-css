@@ -1,0 +1,90 @@
+@use "./mode-lite" as *;
+
+// links
+:where(a, a:link) {
+  color: inherit;
+  outline: transparent;
+  text-decoration: underline;
+  text-decoration-thickness: inherit;
+  text-underline-offset: var(--underline-offset);
+
+  &:hover,
+  &:focus-visible {
+    filter: var(--focus-contrast);
+    text-decoration-thickness: var(--underline-thickness);
+  }
+
+  &:active,
+  &:visited {
+    color: var(--visited-color);
+  }
+}
+
+// inputs, buttons and cta
+.button,
+button,
+input[type="submit"] {
+  cursor: pointer;
+  text-decoration: none;
+  outline-width: thin;
+  outline-color: currentcolor;
+  font-size: inherit;
+  font-weight: inherit;
+  outline-offset: var(--outline-offset);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 12ch;
+  max-width: fit-content;
+  margin-block: 0.25rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  transition: all 250ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    filter: var(--focus-contrast);
+  }
+}
+
+.theme {
+  color: var(--text-invert);
+  background-color: var(--theme-color);
+}
+
+.accent {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+.black {
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+.grey {
+  color: var(--white-color);
+  background-color: var(--grey-color);
+}
+
+.white {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.theme,
+.accent,
+.black,
+.grey,
+.white {
+  &:hover,
+  &:focus-visible {
+    filter: var(--focus-contrast);
+  }
+}

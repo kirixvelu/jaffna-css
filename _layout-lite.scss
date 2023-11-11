@@ -1,0 +1,68 @@
+// Responsive grid
+.grid {
+  display: grid;
+  gap: var(--space-0);
+  max-width: var(--content-width);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--column-width)), 1fr)
+  );
+
+  & + .grid {
+    margin-top: var(--space-0);
+  }
+}
+// Flexible grid
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  gap: var(--space-0);
+  max-width: var(--content-width);
+
+  // flex items (li)
+  > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: var(--column-width);
+  }
+}
+// Duo grid
+.duo {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--column-width)), 1fr)
+  );
+  max-width: 60rem;
+  gap: var(--space--2);
+  margin-inline: auto;
+
+  > * {
+    grid-column: span 1;
+    margin: 0;
+  }
+  .full {
+    grid-column: 1 / -1;
+  }
+}
+
+// Scroll grid
+.scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+
+  > * {
+    width: min(45ch, 60vw);
+    padding: 0.5rem 1rem;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    border: 2px solid;
+    border-radius: 0.25rem;
+  }
+}

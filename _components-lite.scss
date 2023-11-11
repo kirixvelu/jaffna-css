@@ -1,0 +1,81 @@
+// Blockquote
+blockquote {
+  width: min(100%, 45ch);
+  margin-inline: auto;
+  padding-left: 0.5rem;
+  border-left: 0.25rem solid;
+}
+
+blockquote p {
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+blockquote p::before {
+  content: "\275D";
+}
+
+blockquote p::after {
+  content: "\275E";
+}
+
+blockquote p::before,
+blockquote p::after {
+  color: inherit;
+}
+
+// accordion content
+details {
+  width: min(100%, 75ch);
+  margin-inline: auto;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.5rem 0;
+  margin-block: 0.25rem;
+}
+
+summary > * {
+  display: inline;
+}
+
+summary::marker {
+  color: inherit;
+  font-size: 1.25em;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: -0.5rem -0.5rem 0;
+  padding: 0.5rem;
+  color: var(--text-invert);
+  background-color: var(--background-invert);
+}
+
+details p {
+  margin-top: 0.5rem;
+}
+
+// table content
+table {
+  margin-block: 1rem;
+  margin-inline: auto;
+  width: min(100%, 75ch);
+}
+
+th,
+td {
+  text-align: left;
+  padding-block: 0.75em;
+  padding-inline: 0.25em;
+  border-bottom: 1px solid currentColor;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}

@@ -1,0 +1,150 @@
+// form ul
+form {
+  padding: 2rem 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea,
+select,
+option,
+input {
+  padding: 0.25rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+textarea:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  border: 1px solid;
+  outline-color: transparent;
+}
+
+input[type="checkbox"]:focus {
+  outline: 1px dotted;
+}
+
+// input interaction behavior
+input {
+  border: 1px solid;
+}
+// border turns red
+input:not(:focus-visible):not(:placeholder-shown):invalid {
+  border-color: var(--alert-color);
+}
+
+// border turns green
+input:not(:focus-visible):not(:placeholder-shown):valid {
+  border-color: var(--success-color);
+}
+
+select:not(:focus-visible):not(:disabled):valid {
+  border-color: var(--success-color);
+}
+
+// shown hint
+input:not(:focus-visible):not(:placeholder-shown):invalid ~ .alert {
+  display: block;
+}
+// hidden default
+.hidden {
+  display: none;
+}
+.alert {
+  color: var(--alert-color);
+}
+
+// Form Template
+// <form action="" method="post">
+// <ul class="duo" role="list">
+//   <li class="full">
+//     <hgroup>
+//       <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+//       <p>
+//         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+//         Maiores porro deserunt sapiente facilis a doloribus tempore
+//         atque? Unde, laudantium veritatis. Please note that all fields
+//         marked with * are required!
+//       </p>
+//     </hgroup>
+//   </li>
+//   <li>
+//     <label for="name">Name:* </label>
+//     <input
+//       type="text"
+//       id="name"
+//       name="name"
+//       required
+//       minlength="8"
+//       maxlength="32"
+//       placeholder="Full Name"
+//       autocomplete="name"
+//     />
+//     <p class="hidden alert">Please enter your full name!</p>
+//   </li>
+
+//   <li>
+//     <label for="email">Email:* </label>
+//     <input
+//       type="email"
+//       id="email"
+//       name="email"
+//       required
+//       minlength="12"
+//       maxlength="64"
+//       placeholder="Email Address"
+//       autocomplete="email"
+//     />
+//     <p class="hidden alert">Please enter your email address!</p>
+//   </li>
+
+//   <li>
+//     <label for="phone">Telephone:</label>
+
+//     <input
+//       type="tel"
+//       id="phone"
+//       name="phone"
+//       minlength="9"
+//       maxlength="16"
+//       placeholder="Phone Number"
+//       autocomplete="tel"
+//     />
+//     <p class="hidden alert">
+//       Please enter your phone number with area code!
+//     </p>
+//   </li>
+
+//   <li>
+//     <label for="inquiry">Type of Inquiry:*</label>
+
+//     <select name="inquiry" id="inquiry" required>
+//       <option value="" disabled selected>--Please choose--</option>
+//       <option value="Individual">Individual</option>
+//       <option value="Business">Business</option>
+//       <option value="Non-profit">Non-profit</option>
+//       <option value="Government">Government</option>
+//     </select>
+//     <p class="hidden alert">Please select the type of inquiry!</p>
+//   </li>
+
+//   <li class="full">
+//     <label for="msg">Message:*</label>
+//     <textarea
+//       id="msg"
+//       name="message"
+//       required
+//       placeholder="message"
+//       minlength="40"
+//       maxlength="500"
+//     ></textarea>
+//     <p class="hidden alert">Please write the message!</p>
+//   </li>
+//   <li>
+//     <button name="submit" type="submit">Submit</button>
+//   </li>
+// </ul>
+// </form>

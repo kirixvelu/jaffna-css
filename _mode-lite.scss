@@ -1,0 +1,65 @@
+// Dark Mode
+@mixin dark-mode($background: null, $color: null) {
+  @media screen and (prefers-color-scheme: dark) {
+    @if ($background != null and $color != null) {
+      background-color: $background;
+      color: $color;
+      @content;
+    } @else if ($background != null and $color == null) {
+      background-color: $background;
+      @content;
+    } @else if ($color != null and $background == null) {
+      color: $color;
+      @content;
+    } @else {
+      @content;
+    }
+  }
+}
+
+// Contrast Mode
+@mixin high-contrast($background: null, $color: null) {
+  @media screen and (prefers-contrast: more) {
+    @if ($background != null and $color != null) {
+      background-color: $background;
+      color: $color;
+      @content;
+    } @else if ($background != null and $color == null) {
+      background-color: $background;
+      @content;
+    } @else if ($color != null and $background == null) {
+      color: $color;
+      @content;
+    } @else {
+      @content;
+    }
+  }
+}
+
+//   usage for Contrast Mode
+
+//   Style text color only:
+//   @include high-contrast($color: white);
+
+//   Style background only:
+//   @include high-contrast($background: black);
+
+//   Style background and text color:
+//   @include high-contrast(black, white);
+
+//   Style something other than background and text color:
+//   @include high-contrast() {
+//     border-color: white;
+//   }
+//   Style background, text color and something else:
+//   @include high-contrast(black, white) {
+//     border-color: white;
+//   }
+//   Style background and something else:
+//   @include high-contrast($background: black) {
+//     border-color: white;
+//   }
+//   Style text color and something else:
+//   @include high-contrast($color: white) {
+//     border-color: white;
+//   }

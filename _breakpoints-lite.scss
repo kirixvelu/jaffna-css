@@ -2,16 +2,14 @@
 // Mobile first ignore unused css
 $breakpoints: (
   "xs": 0,
-  "sm": 30em,
+  "sm": 30rem,
   // 480px
-  "md": 45em,
+  "md": 45rem,
   // 720px
-  "lg": 60em,
+  "lg": 60rem,
   // 960px
-  "xl": 75em,
+  "xl": 75rem,
   // 1200px
-  "xxl": 90em,
-  // 1440px
 );
 
 // Media breakpoint mixins

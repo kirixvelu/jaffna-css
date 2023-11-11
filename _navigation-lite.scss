@@ -1,0 +1,97 @@
+// primary navigation
+.nav {
+  border-bottom: 1px solid;
+
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+
+    .close,
+    .menu {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    .close {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+
+    li {
+      list-style: none;
+      display: none;
+
+      &:first-child {
+        margin-right: auto;
+        display: block;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Toggle the hamburger menu in mobile view
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+//Change from menu to close icon on tap
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+// Desktop view
+@media only screen and (min-width: 720px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__menu {
+      flex-direction: row;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+// HTML
+// <header>
+// <nav class="nav">
+//   <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+//   <label for="nav__checkbox" class="nav__toggle">
+//   <span class="menu">menu</span>
+//   <span class="close">close</span>
+//   </label>
+//   <ul class="nav__menu" role="list">
+//     <li><a href="#">Brand</a></li>
+//     <li><a href="#">About</a></li>
+//     <li><a href="#">Work</a></li>
+//     <li><a href="#">Contact</a></li>
+//   </ul>
+// </nav>
+// </header>

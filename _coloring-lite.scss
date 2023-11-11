@@ -1,0 +1,41 @@
+// Linear Gradients based on theme variables (recommended for primary containers)
+.gradient-grey,
+.gradient-white,
+.gradient-black,
+.gradient-accent,
+.gradient-theme {
+  background-size: 150%;
+  background-position: center;
+}
+
+.gradient-theme {
+  background-image: linear-gradient(
+    45deg,
+    var(--theme-dark),
+    var(--theme-light)
+  );
+}
+.gradient-accent {
+  background-image: linear-gradient(
+    45deg,
+    var(--accent-dark),
+    var(--accent-light)
+  );
+}
+.gradient-black {
+  background-image: linear-gradient(
+    45deg,
+    var(--black-dark),
+    var(--black-light)
+  );
+}
+.gradient-white {
+  background-image: linear-gradient(
+    45deg,
+    var(--white-dark),
+    var(--white-light)
+  );
+}
+.gradient-grey {
+  background-image: linear-gradient(45deg, var(--grey-dark), var(--grey-light));
+}

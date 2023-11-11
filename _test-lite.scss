@@ -1,0 +1,27 @@
+@use "breakpoints-lite" as *;
+
+.responsive-test {
+  @include xs {
+    color: b;
+  }
+
+  @include sm {
+    color: green;
+  }
+
+  @include md {
+    color: red;
+  }
+
+  @include lg {
+    color: purple;
+  }
+
+  @include xl {
+    color: orange;
+  }
+
+  @include xxl {
+    color: pink;
+  }
+}

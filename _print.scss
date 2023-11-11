@@ -1,5 +1,33 @@
 // Print defaults
 @media print {
+  nav,
+  header,
+  footer,
+  video,
+  audio {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.3;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  img,
+  figure {
+    max-width: 500px;
+  }
+
   body,
   summary,
   details,

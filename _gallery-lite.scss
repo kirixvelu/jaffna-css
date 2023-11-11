@@ -1,0 +1,185 @@
+@use "./breakpoints-lite" as *;
+
+// ul wrapper
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  max-width: var(--content-width);
+  gap: 1rem;
+
+  > * {
+    flex: 1 1 20rem;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// thumbnails li
+.thumbnail {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+
+  img {
+    filter: grayscale(50%);
+    opacity: 0.8;
+    object-fit: cover;
+    margin-inline: auto;
+    transition: filter 250ms ease-in-out, opacity 250ms ease-in-out,
+      transform 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      filter: grayscale(25%);
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+}
+
+/* Unopened lightbox */
+.lightbox {
+  display: none;
+
+  /* Opened lightbox */
+  &:target {
+    position: fixed;
+    inset: 0;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  /* Lightbox content */
+  img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    filter: grayscale(0);
+  }
+
+  /* Close button */
+  .close {
+    position: relative;
+    display: block;
+  }
+
+  .close::after {
+    right: 1rem;
+    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.75;
+    border: 2px solid;
+    border-radius: 50%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 700;
+    content: "X";
+    cursor: pointer;
+  }
+
+  /* Lightbox overlay */
+  .close::before {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: "";
+    cursor: default;
+  }
+}
+
+// HTML Boilerplate
+// hashtag avoid page jumps
+// thumbnails inside gallery
+// lightbox outside container
+// recommended size 1080px
+// <ul class="gallery" role="list">
+//         <li class="thumbs">
+//           <a href="#item1"
+//             ><img src="https://unsplash.it/800?random=1" alt=""
+//           /></a>
+//         </li>
+
+//         <li class="thumbs">
+//           <a href="#item2"
+//             ><img src="https://unsplash.it/800?random=2" alt=""
+//           /></a>
+//         </li>
+
+//         <li class="thumbs">
+//           <a href="#item3"
+//             ><img src="https://unsplash.it/800?random=3" alt=""
+//           /></a>
+//         </li>
+
+//         <li class="thumbs">
+//           <a href="#item4"
+//             ><img src="https://unsplash.it/800?random=4" alt=""
+//           /></a>
+//         </li>
+
+//         <li class="thumbs">
+//           <a href="#item5"
+//             ><img src="https://unsplash.it/800?random=5" alt=""
+//           /></a>
+//         </li>
+
+//         <li class="thumbs">
+//           <a href="#item6"
+//             ><img src="https://unsplash.it/800?random=6" alt=""
+//           /></a>
+//         </li>
+//       </ul>
+
+//       <div class="lightbox" id="item1">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=1" alt=""
+//         /></a>
+//       </div>
+
+//       <div class="lightbox" id="item2">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=2" alt=""
+//         /></a>
+//       </div>
+
+//       <div class="lightbox" id="item3">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=3" alt=""
+//         /></a>
+//       </div>
+
+//       <div class="lightbox" id="item4">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=4" alt=""
+//         /></a>
+//       </div>
+
+//       <div class="lightbox" id="item5">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=5" alt=""
+//         /></a>
+//       </div>
+
+//       <div class="lightbox" id="item6">
+//         <a href="#_" class="close"
+//           ><img src="https://unsplash.it/800?random=6" alt=""
+//         /></a>
+//       </div>

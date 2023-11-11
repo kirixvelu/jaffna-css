@@ -1,11 +1,13 @@
 // Jaffna CSS 3.0 Architecture | License: MIT License
 // Author: Kiri Vadivelu | https://github.com/kiri-vadivelu/jaffna-css
+
+@forward "./breakpoints"; // require use
+
 @use "./fonts";
 @use "./destyle"; // resets
 @use "./theming";
 @use "./global";
 @use "./typeface";
-@use "./breakpoints"; // require use
 @use "./navigation";
 @use "./layout";
 @use "./component";

@@ -1,0 +1,104 @@
+@use "./breakpoints-lite" as *;
+
+// architecture
+html {
+  scroll-padding-top: 2rem; // below navigation
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; // no horizontal scroll
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto; // Keep footer at bottom
+  padding-block: 1rem;
+}
+
+main,
+footer,
+header,
+nav {
+  padding-inline: 1rem; // primary elements, no nesting
+}
+
+nav {
+  border-bottom: 1px solid;
+}
+
+header {
+  display: grid;
+  place-content: center;
+  background-color: var(--theme-color);
+  hgroup {
+    max-width: 60rem;
+    text-align: center;
+    padding-block: 10vh;
+  }
+}
+
+main {
+  padding-block: 5vh;
+}
+
+article {
+  width: min(100%, 75ch);
+  margin-inline: auto;
+  padding-block: 1rem;
+
+  img {
+    margin-bottom: var(--space-2);
+  }
+}
+
+main,
+main.container {
+  padding-block: 5vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 75rem);
+  margin-inline: auto;
+}
+
+section {
+  padding-top: 1rem;
+}
+
+section:nth-child(odd) {
+  background-color: var(--grey-light);
+}
+
+hr {
+  margin-block: 2.5rem; // divider with space
+}
+
+img,
+picture {
+  margin-inline: auto;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+audio,
+video,
+embed,
+iframe,
+object {
+  width: 100%;
+  display: block;
+}
+
+audio {
+  border: 2px solid; // audio wrapper style
+  border-radius: 0.25rem;
+}
+
+iframe {
+  border: 1px solid;
+}
